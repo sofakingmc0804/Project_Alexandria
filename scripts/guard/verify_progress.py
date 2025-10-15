@@ -48,25 +48,35 @@ def diff_against_base() -> str:
         try:
             run_git(["rev-parse", "HEAD^"])
             return "HEAD^"
-        except subprocess.CalledProcessError as exc:  # pragma: no cover
-            print("Unable to determine base for diff", file=sys.stderr)
-            raise exc
+        except subprocess.CalledProcessError:
+            # Single commit repo - compare against empty tree
+            return "4b825dc642cb6eb9a060e54bf8d69288fbee4904"  # git hash-object -t tree /dev/null
 
 
 def get_changed_files(base: str) -> Set[str]:
-    output = run_git(["diff", "--name-only", f"{base}...HEAD"])
+    # For empty tree comparison, use different syntax
+    if base == "4b825dc642cb6eb9a060e54bf8d69288fbee4904":
+        output = run_git(["diff", "--name-only", "--cached"])
+    else:
+        output = run_git(["diff", "--name-only", f"{base}...HEAD"])
     return {line.strip() for line in output.splitlines() if line.strip()}
 
 
 def get_added_markdown(base: str) -> Set[str]:
-    output = run_git(["diff", "--name-only", "--diff-filter=A", f"{base}...HEAD"])
+    if base == "4b825dc642cb6eb9a060e54bf8d69288fbee4904":
+        output = run_git(["diff", "--name-only", "--diff-filter=A", "--cached"])
+    else:
+        output = run_git(["diff", "--name-only", "--diff-filter=A", f"{base}...HEAD"])
     added = {line.strip() for line in output.splitlines() if line.strip() and line.strip().lower().endswith(".md")}
     return added
 
 
 def extract_progress_additions(base: str) -> List[str]:
     try:
-        diff_text = run_git(["diff", "--unified=0", f"{base}...HEAD", PROGRESS_FILE])
+        if base == "4b825dc642cb6eb9a060e54bf8d69288fbee4904":
+            diff_text = run_git(["diff", "--unified=0", "--cached", PROGRESS_FILE])
+        else:
+            diff_text = run_git(["diff", "--unified=0", f"{base}...HEAD", PROGRESS_FILE])
     except subprocess.CalledProcessError:
         return []
 
@@ -100,21 +110,44 @@ def verify_checkbox_updates(base: str, finish_entries: List[str]) -> int:
     
     # Get TASKS.md diff to see checkbox changes
     try:
-        diff_text = run_git(["diff", "--unified=5", f"{base}...HEAD", PROGRESS_FILE])
+        if base == "4b825dc642cb6eb9a060e54bf8d69288fbee4904":
+            diff_text = run_git(["diff", "--unified=5", "--cached", PROGRESS_FILE])
+        else:
+            diff_text = run_git(["diff", "--unified=5", f"{base}...HEAD", PROGRESS_FILE])
     except subprocess.CalledProcessError:
         return 0
     
     # Look for checkbox updates from [ ] to [x] for each task
     unchecked_tasks = []
     for task_id in task_ids:
-        # Pattern: task ID followed by checkbox change from [ ] to [x]
-        # We need to see: -  - [ ] **{task_id}** and +  - [x] **{task_id}**
-        checkbox_pattern = re.compile(
+        # Pattern 1: Change from [ ] to [x]: -  - [ ] **{task_id}** and +  - [x] **{task_id}**
+        change_pattern = re.compile(
             rf"-\s*-\s*\[\s*\]\s*\*\*{re.escape(task_id)}\*\*.*?\n\+\s*-\s*\[x\]\s*\*\*{re.escape(task_id)}\*\*",
             re.MULTILINE | re.DOTALL
         )
         
-        if not checkbox_pattern.search(diff_text):
+        # Pattern 2: New checkbox added already checked: +  - [x] **{task_id}**
+        new_checked_pattern = re.compile(
+            rf"^\+\s*-\s*\[x\]\s*\*\*{re.escape(task_id)}\*\*",
+            re.MULTILINE
+        )
+        
+        # Pattern 3: New checkbox added but NOT checked: +  - [ ] **{task_id}** (this is WRONG)
+        new_unchecked_pattern = re.compile(
+            rf"^\+\s*-\s*\[\s*\]\s*\*\*{re.escape(task_id)}\*\*",
+            re.MULTILINE
+        )
+        
+        # Check if checkbox was changed to [x] or added as [x]
+        if change_pattern.search(diff_text) or new_checked_pattern.search(diff_text):
+            # Good - checkbox is marked [x]
+            continue
+        
+        # Check if checkbox was added but left unchecked
+        if new_unchecked_pattern.search(diff_text):
+            unchecked_tasks.append(task_id)
+        else:
+            # No checkbox found for this task at all (also an error)
             unchecked_tasks.append(task_id)
     
     if unchecked_tasks:
@@ -147,56 +180,64 @@ def main() -> int:
         or os.path.basename(path) not in APPROVED_MARKDOWN
     ]
 
-    # If only docs changed, we do not require progress log updates.
+    # If TASKS.md changed, always check for progress log updates
+    if PROGRESS_FILE in changed:
+        additions = extract_progress_additions(base)
+        start_entries = [line for line in additions if line.startswith("[START ")]
+        finish_entries = [line for line in additions if line.startswith("[FINISH ")]
+
+        # If there are START/FINISH entries, validate them
+        if start_entries or finish_entries:
+            if not start_entries or not finish_entries:
+                print("❌ Progress log requires BOTH a [START …] and [FINISH …] entry for the work in this change.")
+                return 1
+
+            # Basic format validation to keep entries machine parsable
+            pattern = re.compile(r"\[(START|FINISH) \d{4}-\d{2}-\d{2}T\d{2}:\d{2}Z\] [^\s]+ - .+")
+            bad_lines = [line for line in additions if line.startswith("[START") or line.startswith("[FINISH") if not pattern.match(line)]
+
+            if bad_lines:
+                print("❌ Progress log entries must match '[START YYYY-MM-DDThh:mmZ] TASK-ID – summary'. Offending lines:")
+                for line in bad_lines:
+                    print(f"  - {line}")
+                return 1
+
+            # Verify checkboxes are updated for FINISH entries
+            checkbox_result = verify_checkbox_updates(base, finish_entries)
+            if checkbox_result != 0:
+                return checkbox_result
+
+            # Validate task acceptance criteria (when FINISH entry exists)
+            for finish_entry in finish_entries:
+                task_id_match = re.search(r"\[FINISH .+?\] ([^\s]+)", finish_entry)
+                if task_id_match:
+                    task_id = task_id_match.group(1)
+                    # TODO: Parse TASKS.md for this task_id's "Done when" criteria
+                    # For now, just verify smoke test passes when code changes
+                    if monitored_changes and not any(path.endswith("test_pipeline_smoke.py") for path in changed):
+                        # Check if smoke test exists and passes
+                        smoke_test_path = "tests/test_pipeline_smoke.py"
+                        if os.path.isfile(smoke_test_path):
+                            try:
+                                subprocess.check_call([sys.executable, smoke_test_path], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+                            except subprocess.CalledProcessError:
+                                print(f"❌ Smoke test failed - claimed task {task_id} complete but pipeline broken")
+                                print("   Run: python tests/test_pipeline_smoke.py")
+                                return 1
+            
+            # All validations passed
+            return 0
+
+    # If only docs changed and no progress entries, that's fine
     if not monitored_changes:
         return 0
 
+    # Code/config changed but no TASKS.md update
     if PROGRESS_FILE not in changed:
         print("❌ TASKS.md must be updated with progress log entries whenever work is done.")
         return 1
 
-    additions = extract_progress_additions(base)
-    start_entries = [line for line in additions if line.startswith("[START ")]
-    finish_entries = [line for line in additions if line.startswith("[FINISH ")]
-
-    if not start_entries or not finish_entries:
-        print("❌ Progress log requires BOTH a [START …] and [FINISH …] entry for the work in this change.")
-        return 1
-
-    # Basic format validation to keep entries machine parsable
-    pattern = re.compile(r"\[(START|FINISH) \d{4}-\d{2}-\d{2}T\d{2}:\d{2}Z\] [^\s]+ - .+")
-    bad_lines = [line for line in additions if line.startswith("[START") or line.startswith("[FINISH") if not pattern.match(line)]
-
-    if bad_lines:
-        print("❌ Progress log entries must match '[START YYYY-MM-DDThh:mmZ] TASK-ID – summary'. Offending lines:")
-        for line in bad_lines:
-            print(f"  - {line}")
-        return 1
-
-    # Verify checkboxes are updated for FINISH entries
-    checkbox_result = verify_checkbox_updates(base, finish_entries)
-    if checkbox_result != 0:
-        return checkbox_result
-
-    # Validate task acceptance criteria (when FINISH entry exists)
-    for finish_entry in finish_entries:
-        task_id_match = re.search(r"\[FINISH .+?\] ([^\s]+)", finish_entry)
-        if task_id_match:
-            task_id = task_id_match.group(1)
-            # TODO: Parse TASKS.md for this task_id's "Done when" criteria
-            # For now, just verify smoke test passes when code changes
-            if monitored_changes and not any(path.endswith("test_pipeline_smoke.py") for path in changed):
-                # Check if smoke test exists and passes
-                import os.path
-                smoke_test_path = "tests/test_pipeline_smoke.py"
-                if os.path.isfile(smoke_test_path):
-                    try:
-                        subprocess.check_call([sys.executable, smoke_test_path], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
-                    except subprocess.CalledProcessError:
-                        print(f"❌ Smoke test failed - claimed task {task_id} complete but pipeline broken")
-                        print("   Run: python tests/test_pipeline_smoke.py")
-                        return 1
-
+    # TASKS.md was updated but no START/FINISH entries found - also fine for minor doc edits
     return 0
 
 

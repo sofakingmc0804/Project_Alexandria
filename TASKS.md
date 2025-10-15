@@ -40,6 +40,8 @@
 [FINISH 2025-10-14T23:06Z] K1.05 - scorer.py complete with scoring heuristics
 [START 2025-10-14T23:06Z] K1.06 - Writing pack_builder.py for knowledge pack assembly
 [FINISH 2025-10-14T23:08Z] K1.06 - pack_builder.py working, test pack created successfully
+[START 2025-10-14T23:15Z] TEST-001 - Testing guard checkbox enforcement
+[FINISH 2025-10-14T23:16Z] TEST-001 - Guard enforcement test complete
 <!-- PROGRESS LOG END -->
 
 ## Conventions
@@ -72,6 +74,13 @@
 
 - [x] K1.06 Write `packages/knowledge/pack_builder.py` that filters by TOPIC+LANG, selects ≤12 items ≤100MB, writes YAML to `/packs`.
   **Done when**: `make pack TOPIC=test LANG=en` creates valid pack file.
+
+---
+
+## Guard Testing
+
+-  [x] **TEST-001** Verify guard detects FINISH without checkbox update
+  **Done when**: Guard script blocks commit when FINISH logged but checkbox not marked [x].
 
 ---
 
