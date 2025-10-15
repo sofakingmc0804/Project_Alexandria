@@ -42,6 +42,8 @@
 [FINISH 2025-10-14T23:08Z] K1.06 - pack_builder.py working, test pack created successfully
 [START 2025-10-14T23:15Z] TEST-001 - Testing guard checkbox enforcement
 [FINISH 2025-10-14T23:16Z] TEST-001 - Guard enforcement test complete
+[START 2025-10-14T23:20Z] TEST-002 - Operational test of strengthened guard
+[FINISH 2025-10-14T23:21Z] TEST-002 - Guard now blocks FINISH without checkbox [x]
 <!-- PROGRESS LOG END -->
 
 ## Conventions
@@ -81,6 +83,9 @@
 
 -  [x] **TEST-001** Verify guard detects FINISH without checkbox update
   **Done when**: Guard script blocks commit when FINISH logged but checkbox not marked [x].
+
+- [x] **TEST-002** Verify guard enforcement operational
+  **Done when**: Attempting to commit FINISH without [x] is blocked by guard.
 
 ---
 
