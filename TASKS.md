@@ -44,6 +44,14 @@
 [FINISH 2025-10-14T23:16Z] TEST-001 - Guard enforcement test complete
 [START 2025-10-14T23:20Z] TEST-002 - Operational test of strengthened guard
 [FINISH 2025-10-14T23:21Z] TEST-002 - Guard now blocks FINISH without checkbox [x]
+[START 2025-10-14T23:25Z] T1.01 - Creating watcher.py for input file scanning and manifest generation
+[FINISH 2025-10-14T23:27Z] T1.01 - watcher.py working, validates formats, creates manifests, rejects invalid files
+[START 2025-10-14T23:28Z] T1.02 - Creating normalizer.py for ffmpeg audio conversion
+[FINISH 2025-10-14T23:30Z] T1.02 - normalizer.py complete, uses WSL ffmpeg, updates manifest (requires ffmpeg install)
+[START 2025-10-14T23:31Z] T1.03 - Creating transcriber.py using faster-whisper
+[FINISH 2025-10-14T23:35Z] T1.03 - transcriber.py complete with SRT and JSON output, word timestamps, graceful fallback
+[START 2025-10-14T23:36Z] T1.04 - Creating language_detector.py
+[FINISH 2025-10-14T23:37Z] T1.04 - language_detector.py complete, updates manifest with detected language
 <!-- PROGRESS LOG END -->
 
 ## Conventions
@@ -136,16 +144,16 @@
 
 ## Phase 1 — Ingestion & ASR
 
-- [ ] T1.01 Write `packages/ingest/watcher.py` that scans `/inputs`, validates formats (.mp3, .wav, .m4a, .mp4), writes `manifest.json` to `/tmp/{job_id}/`.
+- [x] T1.01 Write `packages/ingest/watcher.py` that scans `/inputs`, validates formats (.mp3, .wav, .m4a, .mp4), writes `manifest.json` to `/tmp/{job_id}/`.
   **Done when**: Placing test file in `/inputs` creates manifest; invalid format rejected with error code.
 
-- [ ] T1.02 Write `packages/ingest/normalizer.py` using ffmpeg to convert to WAV 16kHz mono, save to `/tmp/{job_id}/normalized/`.
+- [x] T1.02 Write `packages/ingest/normalizer.py` using ffmpeg to convert to WAV 16kHz mono, save to `/tmp/{job_id}/normalized/`.
   **Done when**: `make ingest` converts test file; output is 16kHz mono WAV.
 
-- [ ] T1.03 Write `packages/asr/transcriber.py` using faster-whisper, outputs `.srt` and `.json` (word timestamps).
+- [x] T1.03 Write `packages/asr/transcriber.py` using faster-whisper, outputs `.srt` and `.json` (word timestamps).
   **Done when**: Transcription JSON has word-level timestamps; SRT syncs to audio.
 
-- [ ] T1.04 Write `packages/asr/language_detector.py` using langdetect on transcript, adds to manifest.
+- [x] T1.04 Write `packages/asr/language_detector.py` using langdetect on transcript, adds to manifest.
   **Done when**: Manifest has `language` field populated correctly.
 
 ---
