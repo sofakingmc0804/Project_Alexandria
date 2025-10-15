@@ -1,0 +1,42 @@
+﻿# Host/Speaker Configuration
+# Defines voices, personas, and characteristics for podcast hosts
+
+hosts:
+  - id: host_a
+    name: "Alex"
+    voice: "f5:en_male_01"      # F5-TTS voice reference
+    fallback: "piper:en_US-lessac-medium"
+    rate: 1.0                    # Speed multiplier (0.8-1.2)
+    pitch: 0.0                   # Pitch shift in semitones
+    seed: 42                     # Deterministic generation
+    role: "primary"              # primary or supporting
+    
+  - id: host_b
+    name: "Jordan"
+    voice: "f5:en_female_02"
+    fallback: "piper:en_US-amy-low"
+    rate: 0.98
+    pitch: -0.1
+    seed: 43
+    role: "supporting"
+
+# Default language
+language: en
+
+# Target episode duration (minutes)
+target_duration_minutes: 60
+
+# Persona reference (points to configs/personas/)
+persona_id: conversational_educator
+
+# Style preferences
+style:
+  formality: "conversational"    # formal, conversational, casual
+  energy: "moderate"             # low, moderate, high
+  technical_depth: "accessible"  # accessible, intermediate, expert
+  
+# Interaction patterns
+dialogue:
+  turn_taking: "balanced"        # balanced, host_a_led, host_b_led
+  interruptions: false
+  backchannel: true              # "mm-hmm", "right", etc.

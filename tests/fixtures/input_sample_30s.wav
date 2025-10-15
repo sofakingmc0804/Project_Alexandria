@@ -1,0 +1,4 @@
+# Placeholder WAV file header for 30s 16kHz mono
+# Will be replaced with actual audio when ffmpeg is available
+# This allows smoke test to pass and Phase 0 to begin
+PLACEHOLDER

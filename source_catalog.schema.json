@@ -1,0 +1,82 @@
+{
+  "title": "Source Catalog Schema",
+  "type": "object",
+  "properties": {
+    "source_id": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "authors": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "published_date": {
+      "type": "string",
+      "format": "date"
+    },
+    "doi": {
+      "type": "string"
+    },
+    "url": {
+      "type": "string"
+    },
+    "file_path_raw": {
+      "type": "string"
+    },
+    "file_path_clean": {
+      "type": "string"
+    },
+    "language": {
+      "type": "string"
+    },
+    "license": {
+      "type": "string"
+    },
+    "topic_tags": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "level": {
+      "type": "string",
+      "enum": [
+        "beginner",
+        "intermediate",
+        "advanced"
+      ]
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "registered",
+        "cleaned",
+        "validated"
+      ]
+    },
+    "sha256": {
+      "type": "string"
+    },
+    "simhash": {
+      "type": "string"
+    },
+    "minhash": {
+      "type": "string"
+    },
+    "notes": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "source_id",
+    "title",
+    "file_path_raw",
+    "language",
+    "status",
+    "sha256"
+  ]
+}

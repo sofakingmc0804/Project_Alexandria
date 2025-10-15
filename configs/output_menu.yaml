@@ -1,0 +1,20 @@
+﻿# Output Menu Configuration
+# Defines deliverables for this episode run
+
+deliverables:
+  - stems           # Per-speaker WAV files for Clipchamp editing
+  - upload_mix      # LUFS-compliant stereo WAV for distribution
+
+length_mode: full   # Options: full (60min), condensed (20min), topic_focus (10min)
+
+persona: conversational_educator  # References /configs/personas/conversational_educator.yaml
+
+mix_profile: clean  # Options: clean, music_light, music_heavy (defined in /configs/mix_profiles/)
+
+target_duration_minutes: 60
+
+promo_count: 3      # Number of highlight clips to generate
+
+localization:
+  enabled: false
+  target_languages: []

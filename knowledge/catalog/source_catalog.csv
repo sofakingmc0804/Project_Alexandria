@@ -1,0 +1,2 @@
+file_path,sha256,file_size_bytes,language,topic,quality_score,is_duplicate,duplicate_of,date_added,last_processed,status,processing_notes
+knowledge\sources_raw\728bd88b_test_source.txt,728bd88b66671feca77f79ecbfdefa39c2b49f18f36fa045325e739d91a59aea,220,en,test,20,false,,2025-10-14T22:49:47.271043,,raw,

@@ -1,0 +1,81 @@
+﻿{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "QC Report Schema",
+  "description": "Quality control metrics and validation results",
+  "type": "object",
+  "required": ["job_id", "timestamp", "passed", "metrics"],
+  "properties": {
+    "job_id": {
+      "type": "string"
+    },
+    "timestamp": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "passed": {
+      "type": "boolean",
+      "description": "Overall QC pass/fail"
+    },
+    "metrics": {
+      "type": "object",
+      "required": ["groundedness", "context_precision", "wer", "lufs"],
+      "properties": {
+        "groundedness": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1,
+          "description": "RAGAS groundedness score (0.8 required)"
+        },
+        "context_precision": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1,
+          "description": "RAGAS context precision (0.7 required)"
+        },
+        "wer": {
+          "type": "number",
+          "minimum": 0,
+          "description": "Word Error Rate percentage (8% required)"
+        },
+        "lufs": {
+          "type": "number",
+          "description": "Integrated loudness in LUFS (-161 required)"
+        },
+        "true_peak_db": {
+          "type": "number",
+          "description": "True peak in dB (-1.0 required)"
+        },
+        "duration_seconds": {
+          "type": "number",
+          "minimum": 0
+        }
+      }
+    },
+    "issues": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["severity", "message"],
+        "properties": {
+          "severity": {
+            "type": "string",
+            "enum": ["blocker", "warning", "info"]
+          },
+          "message": {
+            "type": "string"
+          },
+          "location": {
+            "type": "string",
+            "description": "Where the issue occurred (file, timestamp, etc.)"
+          }
+        }
+      }
+    },
+    "recommendations": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  }
+}

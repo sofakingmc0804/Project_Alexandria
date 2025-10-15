@@ -1,0 +1,47 @@
+
+# ONTOLOGY.yaml
+topics:
+  science:
+    physics:
+      - classical_mechanics
+      - electromagnetism
+      - quantum_mechanics
+    biology:
+      - genetics
+      - microbiology
+      - neuroscience
+  climate_policy:
+    - mitigation
+    - adaptation
+    - carbon_markets
+  economics:
+    - macroeconomics
+    - microeconomics
+    - behavioral
+document_types:
+  - article
+  - chapter
+  - dataset
+  - lecture
+  - podcast
+  - video
+  - blog
+  - spec
+  - repo
+  - slides
+pedagogy_tags:
+  - concept
+  - example
+  - proof
+  - exercise
+  - assessment
+  - case-study
+  - analogy
+quality_flags:
+  - peer_reviewed
+  - primary
+  - secondary
+  - retracted
+  - paywalled
+  - noisy_ocr
+  - translation

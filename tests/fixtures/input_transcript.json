@@ -1,0 +1,9 @@
+﻿{
+  "text": "This is a test transcript for Alexandria podcast generation. The speaker discusses various topics in educational technology.",
+  "segments": [
+    { "id": 0, "start": 0.0, "end": 5.0, "text": "This is a test transcript for Alexandria podcast generation." },
+    { "id": 1, "start": 5.0, "end": 10.0, "text": "The speaker discusses various topics in educational technology." }
+  ],
+  "language": "en",
+  "duration": 30.0
+}

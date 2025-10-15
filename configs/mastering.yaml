@@ -1,0 +1,52 @@
+﻿# Audio Mastering Configuration
+# Controls final audio processing and normalization
+
+# Target loudness (LUFS) - broadcast standard
+lufs_target: -16.0
+lufs_tolerance: 1.0
+
+# True peak limit (dBTP)
+true_peak_max: -1.0
+
+# Processing chain
+processing:
+  # High-pass filter to remove rumble
+  highpass_hz: 80
+  
+  # De-esser to tame sibilance
+  de_ess: true
+  de_ess_freq_hz: 6000
+  de_ess_threshold_db: -20
+  
+  # Compression
+  compressor: true
+  comp_threshold_db: -18
+  comp_ratio: 3.0
+  comp_attack_ms: 5
+  comp_release_ms: 50
+  
+  # Limiter (final safety)
+  limiter: true
+  limiter_threshold_db: -1.5
+  
+  # EQ adjustments
+  eq_enabled: false
+  eq_presets: []
+
+# Crossfade between segments
+crossfade_ms: 50
+
+# Output formats
+export_formats:
+  - format: "wav"
+    bitdepth: 16
+    sample_rate: 48000
+  - format: "mp3"
+    bitrate: 192
+  - format: "opus"
+    bitrate: 128
+
+# Stems export
+export_stems: true
+stem_format: "wav"
+stem_bitdepth: 24

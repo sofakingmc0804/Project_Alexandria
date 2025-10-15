@@ -1,0 +1,55 @@
+﻿{
+  "job_id": "golden_example_001",
+  "timestamp": "2025-10-14T22:00:00Z",
+  "files": [
+    {
+      "path": "examples/golden_output/stems/speaker_a_001.wav",
+      "type": "stem",
+      "size_bytes": 5760000,
+      "duration_seconds": 30.0,
+      "checksum_sha256": "abc123..."
+    },
+    {
+      "path": "examples/golden_output/stems/speaker_b_001.wav",
+      "type": "stem",
+      "size_bytes": 5760000,
+      "duration_seconds": 30.0,
+      "checksum_sha256": "def456..."
+    },
+    {
+      "path": "examples/golden_output/mixes/golden_episode_mix.wav",
+      "type": "mix",
+      "size_bytes": 5760000,
+      "duration_seconds": 30.0,
+      "checksum_sha256": "ghi789..."
+    },
+    {
+      "path": "examples/golden_output/study_guide.md",
+      "type": "study_guide",
+      "size_bytes": 2048
+    }
+  ],
+  "metadata": {
+    "title": "Golden Example Episode",
+    "description": "Reference output showing correct structure and quality",
+    "language": "en",
+    "persona": "conversational_educator",
+    "mix_profile": "clean",
+    "total_duration_seconds": 30.0
+  },
+  "qc_metrics": {
+    "passed": true,
+    "groundedness": 0.85,
+    "context_precision": 0.78,
+    "wer": 5.2,
+    "lufs": -16.0,
+    "true_peak_db": -1.5,
+    "issues": []
+  },
+  "config": {
+    "deliverables": ["stems", "upload_mix", "study_pack"],
+    "length_mode": "topic_focus",
+    "persona": "conversational_educator",
+    "mix_profile": "clean"
+  }
+}

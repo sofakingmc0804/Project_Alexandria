@@ -1,0 +1,92 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+venv/
+env/
+ENV/
+
+# Agent logs
+.agent_log.json
+
+# Temporary files
+tmp/
+*.tmp
+*.log
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Project specific
+inputs/*
+!inputs/.gitkeep
+sources/*
+!sources/.gitkeep
+dist/export/*
+!dist/export/.gitkeep
+knowledge/sources_raw/*
+!knowledge/sources_raw/.gitkeep
+knowledge/sources_clean/*
+!knowledge/sources_clean/.gitkeep
+knowledge/packs/*
+!knowledge/packs/.gitkeep
+knowledge/cache/*
+!knowledge/cache/.gitkeep
+
+# Docker
+*.env
+!.env.example
+
+# Models
+*.bin
+*.pt
+*.pth
+*.onnx
+models/
+
+# Do not allow forbidden documentation
+TODO.md
+NOTES.md
+CHANGELOG.md
+CONTRIBUTING.md
+ARCHITECTURE.md
+DESIGN.md
+ROADMAP.md
+
+# Data directories
+/tmp/*
+!/tmp/.gitkeep
+/inputs/*
+!/inputs/README.md
+/sources/*
+!/sources/README.md
+/dist/*
+!/dist/README.md
+.metadata/catalogs/*
+.metadata/indexes/*
+.metadata/duplicates/*

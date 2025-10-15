@@ -1,0 +1,141 @@
+# MANDATORY AGENT RULES - READ FIRST BEFORE ANY ACTION
+
+## ABSOLUTE CONSTRAINTS - VIOLATION = STOP EXECUTION
+
+### 1. DOCUMENTATION PROHIBITION
+FORBIDDEN_ACTIONS:
+  - Creating new .md files (except README.md if T9.03 active)
+  - Creating new documentation of any kind
+  - Creating "notes", "plans", "summaries", "reports" outside of required task outputs
+  - Writing explanatory documents
+  - Creating design docs, ADRs, wikis
+
+ALLOWED_DOCUMENTATION:
+  - PRD.md (update only, never create)
+  - SPEC.md (update only, never create)
+  - TASKS.md (update only, never create)
+  - Knowledge_Source_Organization.md (update only, never create)
+  - ONTOLOGY.yaml (update only, never create)
+  - README.md (only when task T9.03 is active)
+
+### 2. SOURCE DOCUMENT UPDATES (MANDATORY)
+BEFORE_ANY_WORK:
+  - Run: python scripts/mark_task_start.py <task_id>
+  - Confirms task exists in TASKS.md
+  - Updates task status to "in_progress"
+  - Logs start time in .agent_log.json
+
+AFTER_TASK_COMPLETION:
+  - Run: python scripts/mark_task_done.py <task_id>
+  - Validates outputs exist per task "Done when" criteria
+  - Updates task checkbox in TASKS.md to [x]
+  - Logs completion time in .agent_log.json
+  - BLOCKS if validation fails
+
+### 3. FILE CREATION ALLOWLIST
+ONLY_ALLOWED_TO_CREATE:
+  - Files explicitly named in TASKS.md task "Done when" criteria
+  - Files in /app/packages/<package>/*.py for active tasks
+  - Files in /configs/ matching templates in task descriptions
+  - Files in /schemas/ when task specifies schema creation
+  - Files in /tmp/ (temporary work)
+  - Files in /dist/ (outputs)
+  - Files in /tests/ for testing tasks
+
+BLOCKED_DIRECTORIES:
+  - / (root) - no new top-level files except .gitignore, .env
+  - /docs/ - does not exist, must not be created
+
+### 4. TASK EXECUTION ORDER
+MUST:
+  - Execute tasks in phase order (Phase K → 0 → 1 → 2...)
+  - Complete all tasks in a phase before moving to next
+  - Never skip tasks
+  - Never work on tasks marked "V1 Enhancement" until MVP complete
+
+TASK_COMPLETE_DEFINITION:
+  - All "Done when" criteria met
+  - Validation script passes
+  - Task marked [x] in TASKS.md
+  - .agent_log.json has completion entry
+
+### 5. VALIDATION GATES (BLOCKING)
+BEFORE_PROCEEDING:
+  - Run: python scripts/validate_phase.py <phase_id>
+  - Checks all phase tasks complete
+  - Validates all outputs exist and are valid
+  - BLOCKS next phase if any task incomplete
+
+### 6. NO DEVIATION FROM SPECS
+FORBIDDEN:
+  - Adding features not in PRD.md §4 "In Scope"
+  - Creating files not specified in TASKS.md
+  - Using libraries not in requirements.txt (task T0.03)
+  - Changing directory structure from SPEC.md §3
+  - Implementing "nice-to-haves" during MVP
+
+WHEN_STUCK:
+  - Write error to .agent_log.json with task_id and blocker
+  - DO NOT create workaround documentation
+  - DO NOT skip to different task
+  - STOP and flag for human review
+
+### 7. PROGRESS VISIBILITY (AUTOMATED)
+EVERY_SESSION_START:
+  - Run: python scripts/report_status.py
+  - Shows: current phase, completed tasks, next task, blockers
+  - Updates TASKS.md with current state
+
+EVERY_COMMIT:
+  - Git pre-commit hook runs validation
+  - Checks no forbidden files added
+  - Checks task progress updated
+  - BLOCKS commit if validation fails
+
+### 8. REFERENCE DOCUMENTS ONLY
+SOURCE_OF_TRUTH:
+  - TASKS.md - what to build, in what order
+  - PRD.md - requirements and scope
+  - SPEC.md - technical architecture
+  - Knowledge_Source_Organization.md - source curation rules
+  - ONTOLOGY.yaml - controlled vocabulary
+
+READ_ONLY:
+  - All source documents are read-only except for progress updates
+  - Changes to requirements = update PRD.md via explicit task
+  - Changes to architecture = update SPEC.md via explicit task
+
+### 9. OUTPUT VALIDATION (BLOCKING)
+AFTER_CREATING_ANY_FILE:
+  - If .json file: validate against schema in /schemas/
+  - If .yaml file: validate YAML syntax + required fields
+  - If .py file: run black formatter, check imports exist
+  - If test file: run pytest on it
+  - BLOCK if validation fails
+
+### 10. ANTI-PATTERNS (IMMEDIATE STOP)
+NEVER:
+  - Create TODO.md, NOTES.md, CHANGELOG.md, CONTRIBUTING.md
+  - Create /docs/ directory
+  - Write progress reports as files
+  - Create "improvement plans" or "next steps" documents
+  - Generate architecture diagrams as files (reference existing docs)
+  - Create "lessons learned" or "postmortem" files
+
+## ENFORCEMENT MECHANISM
+
+ALL_WORK_MUST_FLOW_THROUGH:
+  - scripts/agent_task.py <task_id>
+
+This wrapper:
+  1. Validates task exists and is not complete
+  2. Marks task started
+  3. Allows agent to execute
+  4. Validates outputs
+  5. Marks task complete or logs blocker
+  6. Updates TASKS.md automatically
+
+BYPASS_IMPOSSIBLE:
+  - Git hooks block commits without validation
+  - Makefile targets call validation scripts
+  - CI/CD runs validation on every push
