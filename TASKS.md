@@ -125,6 +125,13 @@
 [START 2025-10-27T18:45Z] REM-020.4 - Creating language_detector.py unit tests with langdetect mocking
 [FINISH 2025-10-27T19:00Z] REM-020.4 - Created 8 unit tests for language_detector.py with langdetect mocking
 [FINISH 2025-10-27T19:15Z] REM-020 - Completed Phase 1 testing with 54 total unit tests (all passing)
+[START 2025-10-27T19:30Z] REM-030 - Adding deterministic fixtures and tests for Phase 2 segmentation/embedding
+[FINISH 2025-10-27T20:00Z] REM-030.1 - Verified existing segmenter tests (2 tests) and indexer test (1 test), all passing
+[START 2025-10-27T20:00Z] REM-030.2 - Creating embedder.py unit tests with sentence-transformers mocking
+[FINISH 2025-10-27T20:30Z] REM-030.2 - Created 9 unit tests for embedder.py with sentence-transformers mocking
+[START 2025-10-27T20:30Z] REM-030.3 - Creating graph builder unit tests
+[FINISH 2025-10-27T21:00Z] REM-030.3 - Created 17 unit tests for graph builder (similarity, duplicates, graph construction)
+[FINISH 2025-10-27T21:15Z] REM-030 - Completed Phase 2 testing with 29 total unit tests (all passing), fixed numpy bool serialization bug
 <!-- PROGRESS LOG END -->
 [START 2025-10-17T14:00Z] T6.01 - Update outliner.py to support length_mode variants
 [FINISH 2025-10-17T14:15Z] T6.01 - Outliner now supports full/condensed/topic_focus modes with segment selection and duration targeting
@@ -216,8 +223,12 @@
   - [x] REM-020.3 Create transcriber.py unit tests (14 tests for faster-whisper ASR)
   - [x] REM-020.4 Create language_detector.py unit tests (8 tests for langdetect integration)
 
-- [ ] REM-030 Add deterministic fixtures and tests for Phase 2 segmentation/embedding.
+- [x] REM-030 Add deterministic fixtures and tests for Phase 2 segmentation/embedding.
   **Done when**: Segmenter, embedder, indexer, and graph builder produce validated outputs under pytest.
+  - [x] REM-030.1 Verify existing segmenter tests (2 tests) and indexer test (1 test)
+  - [x] REM-030.2 Create embedder.py unit tests (9 tests for sentence-transformers integration)
+  - [x] REM-030.3 Create graph builder unit tests (17 tests for similarity, duplicates, graph construction)
+  - [x] REM-030.4 Fix numpy bool serialization bug in builder.py
 
 - [ ] REM-040 Build regression tests for Phase 3 planning/writing pipeline.
   **Done when**: Outliner, selector, scripter, and continuity checker have fixture-driven tests asserting expected artifacts.

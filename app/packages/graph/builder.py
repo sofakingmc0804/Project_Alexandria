@@ -102,7 +102,7 @@ def build_graph(
                     'source_index': i,
                     'target_index': j,
                     'similarity': float(sim),
-                    'is_duplicate': sim >= duplicate_threshold
+                    'is_duplicate': bool(sim >= duplicate_threshold)
                 })
     
     # Find duplicates
