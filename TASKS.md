@@ -118,6 +118,13 @@
 [FINISH 2025-10-27T00:05Z] UPLOAD-001 - Repository uploaded and synced with GitHub
 [START 2025-10-27T17:00Z] REM-020 - Adding deterministic fixtures and tests for Phase 1 ingestion/ASR
 [FINISH 2025-10-27T17:15Z] REM-020.1 - Created test audio fixtures and 17 unit tests for watcher.py with full coverage
+[START 2025-10-27T17:30Z] REM-020.2 - Creating normalizer.py unit tests with ffmpeg mocking
+[FINISH 2025-10-27T18:30Z] REM-020.2 - Created 15 unit tests for normalizer.py with ffmpeg mocking
+[START 2025-10-27T18:30Z] REM-020.3 - Creating transcriber.py unit tests with faster-whisper mocking
+[FINISH 2025-10-27T18:45Z] REM-020.3 - Created 14 unit tests for transcriber.py with faster-whisper mocking
+[START 2025-10-27T18:45Z] REM-020.4 - Creating language_detector.py unit tests with langdetect mocking
+[FINISH 2025-10-27T19:00Z] REM-020.4 - Created 8 unit tests for language_detector.py with langdetect mocking
+[FINISH 2025-10-27T19:15Z] REM-020 - Completed Phase 1 testing with 54 total unit tests (all passing)
 <!-- PROGRESS LOG END -->
 [START 2025-10-17T14:00Z] T6.01 - Update outliner.py to support length_mode variants
 [FINISH 2025-10-17T14:15Z] T6.01 - Outliner now supports full/condensed/topic_focus modes with segment selection and duration targeting
@@ -202,9 +209,12 @@
 - [x] REM-010 Re-validate Phase 0 scaffolding and create smoke tests.
   **Done when**: Each scaffolded file has an automated test or validation check proving baseline functionality.
 
-- [ ] REM-020 Replace Phase 1 ingestion/ASR mocks with verifiable behaviors and tests.
+- [x] REM-020 Replace Phase 1 ingestion/ASR mocks with verifiable behaviors and tests.
   **Done when**: Watcher, normalizer, transcriber, and language detector have deterministic fixtures and pytest coverage.
   - [x] REM-020.1 Create test audio fixtures and watcher.py unit tests
+  - [x] REM-020.2 Create normalizer.py unit tests (15 tests for ffmpeg integration)
+  - [x] REM-020.3 Create transcriber.py unit tests (14 tests for faster-whisper ASR)
+  - [x] REM-020.4 Create language_detector.py unit tests (8 tests for langdetect integration)
 
 - [ ] REM-030 Add deterministic fixtures and tests for Phase 2 segmentation/embedding.
   **Done when**: Segmenter, embedder, indexer, and graph builder produce validated outputs under pytest.
