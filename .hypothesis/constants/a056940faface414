@@ -1,0 +1,4 @@
+# file: C:\Users\Couch\AppData\Roaming\Python\Python313\site-packages\pytest_subtests\plugin.py
+# hypothesis_version: 6.141.1
+
+['(<subtest>)', ',', ', ', '-', 'Captured log call', 'Captured stderr call', 'Captured stdout call', 'SUBXFAIL', 'SUBXPASS', 'SubTestReport', 'Y', '_capture_fixture', '_originaladdSkip', '_report_type', '_subtest.context', 'addSubTest', 'call', 'capture', 'capturemanager', 'collect', 'context', 'failed', 'failfast', 'fd', 'ignore', 'kwargs', 'logging-plugin', 'msg', 'passed', 'setup', 'skipped', 'store_true', 'subtests', 'sys', 'teardown', 'u', 'wasxfail', 'xfailed', 'xpassed', 'y']

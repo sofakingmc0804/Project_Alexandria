@@ -1,0 +1,4 @@
+# file: C:\Users\Couch\AppData\Roaming\Python\Python313\site-packages\schemathesis\config\_error.py
+# hypothesis_version: 6.141.1
+
+[0.6, ', ', 'a boolean', 'a number', 'a string', 'additionalProperties', 'an array', 'an integer', 'an object', 'anyOf', 'array', 'boolean', 'enum', 'integer', 'items', 'minimum', 'null', 'number', 'object', 'operations', 'properties', 'required', 'root', 'string', 'type', 'value', 'workers']

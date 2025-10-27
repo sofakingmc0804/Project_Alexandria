@@ -1,0 +1,4 @@
+# file: C:\Users\Couch\AppData\Roaming\Python\Python313\site-packages\kombu\utils\json.py
+# hypothesis_version: 6.141.1
+
+['EncodedT', 'T', 'Unsupported type', '__json__', '__type__', '__value__', 'base64', 'bytes', 'date', 'datetime', 'decimal', 'hex', 'time', 'utf-8', 'uuid']

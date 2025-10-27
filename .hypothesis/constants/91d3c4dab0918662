@@ -1,0 +1,4 @@
+# file: C:\Users\Couch\AppData\Roaming\Python\Python313\site-packages\isoduration\parser\parsing.py
+# hypothesis_version: 6.141.1
+
+[',', '.', 'D', 'H', 'M', 'S', 'W', 'Y', 'days', 'hours', 'minutes', 'months', 'seconds', 'weeks', 'years']

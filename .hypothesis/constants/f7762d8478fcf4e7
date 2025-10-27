@@ -1,0 +1,4 @@
+# file: C:\Users\Couch\Documents\AI Projects Folder\Project_Alexandria\scripts\guard\verify_progress.py
+# hypothesis_version: 6.141.1
+
+[8192, ' -> ', '*', '+', '+++', '--', '--disable-warnings', '--maxfail=1', '--porcelain', '--unified=0', '-m', '-q', '.git', '.md', '/', '1', '<!--', '??', '@@', 'FOUNDATION_README.md', 'GUARD_SETUP.md', 'HEAD', 'PHASE0_COMPLETE.md', 'PHASE2_COMPLETE.md', 'PHASE3_COMPLETE.md', 'PHASE4_COMPLETE.md', 'PRD.md', 'Remediation Backlog', 'SPEC.md', 'TASKS.md', 'WORKTREE', '[FINISH', '[FINISH ', '[START', '[START ', '\\', '__main__', '__pycache__', 'developer', 'diff', 'git', 'guard_snapshot.json', 'manifest', 'no tests ran', 'pytest', 'r', 'rb', 'rev-parse', 'show', 'status', 'tasks_md', 'tests', 'tests/', 'tmp', 'utf-8']

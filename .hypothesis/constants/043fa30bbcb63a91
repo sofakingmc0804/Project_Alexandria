@@ -1,0 +1,4 @@
+# file: C:\Users\Couch\AppData\Roaming\Python\Python313\site-packages\schemathesis\config\_projects.py
+# hypothesis_version: 6.141.1
+
+['_override', '_parent', '_rate_limit', 'auth', 'auto', 'base-url', 'base_url', 'checks', 'continue-on-failure', 'continue_on_failure', 'database', 'default', 'generation', 'headers', 'hooks', 'info', 'max-redirects', 'max_examples', 'max_redirects', 'named', 'none', 'operations', 'parameters', 'phases', 'project', 'proxy', 'rate-limit', 'rate_limit', 'request-cert', 'request-cert-key', 'request-timeout', 'request_cert', 'request_cert_key', 'request_timeout', 'sched_getaffinity', 'title', 'tls-verify', 'tls_verify', 'warnings', 'workers']

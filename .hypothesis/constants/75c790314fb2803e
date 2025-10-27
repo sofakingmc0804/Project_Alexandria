@@ -1,0 +1,4 @@
+# file: C:\Users\Couch\AppData\Roaming\Python\Python313\site-packages\schemathesis\specs\openapi\converter.py
+# hypothesis_version: 6.141.1
+
+['$defs', 'additionalProperties', 'allOf', 'anyOf', 'binary', 'contains', 'contentSchema', 'definitions', 'dependentSchemas', 'else', 'file', 'format', 'if', 'items', 'maxLength', 'minLength', 'not', 'null', 'object', 'oneOf', 'pattern', 'patternProperties', 'prefixItems', 'properties', 'propertyNames', 'readOnly', 'required', 'string', 'then', 'type', 'unevaluatedItems', 'writeOnly', 'x-writeOnly']

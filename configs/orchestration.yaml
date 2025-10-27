@@ -1,0 +1,13 @@
+tasks:
+  phase5_pipeline:
+    module: app.apps.worker.handlers
+    callable: handle_phase5_pipeline
+    queue: phase5
+    description: "Execute the Phase 5 audio pipeline via Celery"
+
+api:
+  routes:
+    - name: phase5_submit
+      path: /jobs/phase5
+      method: POST
+      task: phase5_pipeline

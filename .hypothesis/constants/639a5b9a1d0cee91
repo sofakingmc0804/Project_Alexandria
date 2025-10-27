@@ -1,0 +1,4 @@
+# file: C:\Users\Couch\AppData\Roaming\Python\Python313\site-packages\kombu\transport\native_delayed_delivery.py
+# hypothesis_version: 6.141.1
+
+[1000, '#', '*.', '.', '0.#', '1.#', 'at-least-once', 'classic', 'direct', 'quorum', 'reject-publish', 'topic', 'x-message-ttl', 'x-overflow', 'x-queue-type']

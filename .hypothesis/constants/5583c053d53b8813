@@ -1,0 +1,4 @@
+# file: C:\Users\Couch\AppData\Roaming\Python\Python313\site-packages\schemathesis\filters.py
+# hypothesis_version: 6.141.1
+
+[' && ', '!=', '==', '_excludes', '_includes', 'deprecated', 'label', 'matchers', 'method', 'operationId', 'operation_id', 'path', 'tag']

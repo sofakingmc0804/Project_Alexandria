@@ -1,0 +1,42 @@
+{
+  "segments": [
+    {
+      "id": 0,
+      "start": 0.0,
+      "end": 25.0,
+      "text": "Welcome to this episode where we discuss machine learning fundamentals. Today we will explore neural networks and deep learning concepts that are transforming artificial intelligence.",
+      "words": []
+    },
+    {
+      "id": 1,
+      "start": 25.0,
+      "end": 50.0,
+      "text": "Neural networks are inspired by biological neurons in the human brain. They consist of interconnected layers of nodes that process information and learn patterns from data.",
+      "words": []
+    },
+    {
+      "id": 2,
+      "start": 50.0,
+      "end": 75.0,
+      "text": "Deep learning has revolutionized computer vision, natural language processing, and many other fields. It allows computers to learn hierarchical representations of data.",
+      "words": []
+    },
+    {
+      "id": 3,
+      "start": 75.0,
+      "end": 100.0,
+      "text": "Training neural networks requires large datasets and significant computational power. GPUs and specialized hardware have made this more accessible in recent years.",
+      "words": []
+    },
+    {
+      "id": 4,
+      "start": 100.0,
+      "end": 120.0,
+      "text": "Lets now discuss transformer architectures which have become the foundation for modern language models like GPT and BERT.",
+      "words": []
+    }
+  ],
+  "words": [],
+  "language": "en",
+  "duration": 120.0
+}

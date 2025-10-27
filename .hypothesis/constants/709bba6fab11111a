@@ -1,0 +1,4 @@
+# file: C:\Users\Couch\AppData\Roaming\Python\Python313\site-packages\celery\utils\log.py
+# hypothesis_version: 6.141.1
+
+[1000, 'CRITICAL', 'ColorFormatter', 'DEBUG', 'ERROR', 'LOG_LEVELS', 'LoggingProxy', 'MP_LOG', 'WARNING', '_logger', 'base_logger', 'blue', 'celery', 'celery.task', 'celery.worker', 'get_logger', 'get_task_logger', 'in_sighandler', 'index', 'magenta', 'mlevel', 'recurse_protection', 'red', 'set_in_sighandler', 'w', 'yellow']

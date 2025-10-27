@@ -1,0 +1,4 @@
+# file: C:\Users\Couch\AppData\Roaming\Python\Python313\site-packages\celery\loaders\base.py
+# hypothesis_version: 6.141.1
+
+['.', '.py', ':', '=', 'BaseLoader', 'CELERY_CONFIG_MODULE', '\\((\\w+)\\)', '_', 'celery', 'dict', 'json', 'list', 'name', 'override_backends', 'tasks', 'tuple']

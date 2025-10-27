@@ -1,0 +1,11 @@
+{
+  "job_id": "phase2_test",
+  "wer": 0.0354,
+  "wer_percent": 3.54,
+  "threshold": 0.08,
+  "threshold_percent": 8.0,
+  "passed": true,
+  "reference_words": 113,
+  "hypothesis_words": 114,
+  "error_count": 4
+}

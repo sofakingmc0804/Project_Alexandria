@@ -1,0 +1,4 @@
+# file: C:\Users\Couch\AppData\Roaming\Python\Python313\site-packages\celery\utils\saferepr.py
+# hypothesis_version: 6.141.1
+
+["'", "'{}'", '(', ')', ', ', ', ...', ',)', '...', ': ', '[', "\\'", ']', '_dirty', '_key', '_literal', '_quoted', 'b', 'backslashreplace', 'direction', 'objid', 'reprstream', 'saferepr', 'truncate', 'utf-8', 'value', '{', '}']

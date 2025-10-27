@@ -1,0 +1,4 @@
+# file: C:\Users\Couch\AppData\Roaming\Python\Python313\site-packages\schemathesis\transport\serialization.py
+# hypothesis_version: 6.141.1
+
+[b'null', 55295, 57344, 65533, 65536, 1114111, ' xmlns', '"', '$ref', '&', '&amp;', '&apos;', '&gt;', '&lt;', '&quot;', "'", ':', '<', '>', 'NFKC', '[^a-zA-Z0-9_\\-.]', '_', 'attribute', 'data', 'element', 'ignore', 'items', 'json', 'name', 'namespace', 'prefix', 'properties', 'utf8', 'wrapped', 'x_', 'xml']

@@ -1,0 +1,4 @@
+# file: C:\Users\Couch\AppData\Roaming\Python\Python313\site-packages\schemathesis\config\_diff_base.py
+# hypothesis_version: 6.141.1
+
+['DiffBase', 'T', '_', '__dataclass_fields__', '__name__', '_filter_set', '_rate_limit', '_seed', 'filter_set', 'rate_limit', 'seed']

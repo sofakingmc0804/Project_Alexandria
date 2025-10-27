@@ -1,0 +1,4 @@
+# file: C:\Users\Couch\AppData\Roaming\Python\Python313\site-packages\schemathesis\config\_report.py
+# hypothesis_version: 6.141.1
+
+['%Y%m%dT%H%M%SZ', '_timestamp', 'directory', 'enabled', 'har', 'json', 'junit', 'path', 'preserve-bytes', 'preserve_bytes', 'vcr', 'xml', 'yaml']

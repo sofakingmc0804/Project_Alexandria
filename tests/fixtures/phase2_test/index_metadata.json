@@ -1,0 +1,8 @@
+{
+  "job_id": "phase2_test",
+  "index_type": "numpy",
+  "num_vectors": 3,
+  "dimension": 1024,
+  "embedding_model": "mock-hash-based",
+  "index_path": "tests/fixtures/phase2_test/index.npy"
+}

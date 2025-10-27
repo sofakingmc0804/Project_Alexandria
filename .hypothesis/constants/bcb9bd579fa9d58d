@@ -1,0 +1,4 @@
+# file: C:\Users\Couch\AppData\Roaming\Python\Python313\site-packages\celery\backends\base.py
+# hypothesis_version: 6.141.1
+
+[0.0, 0.5, 1000, 8192, 10000, '.', ':///', ':_-.', 'BaseBackend', 'Chord %r raised: %r', 'DisabledBackend', 'KeyValueStoreBackend', '_', '__func__', '__header__', '__qualname__', 'args', 'celery-task-meta-', 'celery-taskset-meta-', 'celery.chord_unlock', 'children', 'chord', 'chord-unlock-', 'chord_size', 'concrete', 'date_done', 'delivery_info', 'disabled://', 'errbacks', 'exc_message', 'exc_module', 'exc_type', 'extended', 'failed to get meta', 'global_keyprefix', 'group', 'group_id', 'hostname', 'id', 'inf', 'interval_max', 'interval_start', 'interval_step', 'is_eager', 'items', 'kwargs', 'link_error', 'max_retries', 'name', 'parent_id', 'pending_results_t', 'pickle', 'priority', 'queue', 'request', 'result', 'retries', 'routing_key', 'stamped_headers', 'stamps', 'status', 'task', 'task_id', 'traceback', 'type', 'weak', 'worker']

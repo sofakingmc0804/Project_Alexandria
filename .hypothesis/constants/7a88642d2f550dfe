@@ -1,0 +1,4 @@
+# file: C:\Users\Couch\AppData\Roaming\Python\Python313\site-packages\schemathesis\pytest\plugin.py
+# hypothesis_version: 6.141.1
+
+[', ', '@example()', 'Authorization', 'BaseSchema', 'Inconsistent args', '__notes__', 'headers', 'metafunc', 'pytestmark', 'schema', 'trio']

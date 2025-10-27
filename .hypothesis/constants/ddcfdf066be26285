@@ -1,0 +1,4 @@
+# file: C:\Users\Couch\AppData\Roaming\Python\Python313\site-packages\numpy\_core\_exceptions.py
+# hypothesis_version: 6.141.1
+
+[1000, 1024, 'EiB', 'GiB', 'KiB', 'MiB', 'PiB', 'TiB', 'bytes']

@@ -1,0 +1,4 @@
+# file: C:\Users\Couch\AppData\Roaming\Python\Python313\site-packages\urllib3\util\timeout.py
+# hypothesis_version: 6.141.1
+
+['connect', 'read', 'total']

@@ -1,0 +1,4 @@
+# file: C:\Users\Couch\AppData\Roaming\Python\Python313\site-packages\schemathesis\core\curl.py
+# hypothesis_version: 6.141.1
+
+[' --insecure', 'Content-Length', 'Transfer-Encoding', 'replace', 'utf-8']

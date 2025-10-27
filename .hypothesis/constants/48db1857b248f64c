@@ -1,0 +1,4 @@
+# file: C:\Users\Couch\AppData\Roaming\Python\Python313\site-packages\schemathesis\core\media_types.py
+# hypothesis_version: 6.141.1
+
+['"', '+json', '+xml', '/', ';', '=', '\\', '\\"', '\\\\', 'application', 'application/x-yaml', 'application/yaml', 'json', 'plain', 'text', 'text/vnd.yaml', 'text/x-yaml', 'text/yaml', 'xml']

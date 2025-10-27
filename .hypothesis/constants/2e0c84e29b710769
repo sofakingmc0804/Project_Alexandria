@@ -1,0 +1,4 @@
+# file: C:\Users\Couch\AppData\Roaming\Python\Python313\site-packages\celery\app\builtins.py
+# hypothesis_version: 6.141.1
+
+['Chord %r raised: %r', 'celery.accumulate', 'celery.chain', 'celery.chord', 'celery.chord_unlock', 'celery.chunks', 'celery.group', 'celery.map', 'celery.starmap', 'index']

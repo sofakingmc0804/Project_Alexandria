@@ -1,0 +1,4 @@
+# file: C:\Users\Couch\Documents\AI Projects Folder\Project_Alexandria\app\packages\writer\persona_loader.py
+# hypothesis_version: 6.141.1
+
+['*.yaml', 'PersonaCard', 'avoid_phrases', 'configs/personas', 'encouraged_words', 'fallback_voice_id', 'lexical_preferences', 'load_persona_cards', 'name', 'primary_voice_id', 'style_notes', 'tone_traits', 'utf-8', 'voice_config']

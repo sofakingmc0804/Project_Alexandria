@@ -1,0 +1,4 @@
+# file: C:\Users\Couch\AppData\Roaming\Python\Python313\site-packages\schemathesis\config\_health_check.py
+# hypothesis_version: 6.141.1
+
+['all', 'data_too_large', 'filter_too_much', 'large_base_example', 'too_slow']

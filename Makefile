@@ -1,7 +1,7 @@
-﻿# Alexandria Podcast Generation Pipeline
+# Alexandria Podcast Generation Pipeline
 # All targets use WSL for cross-platform compatibility
 
-.PHONY: help curate clean dedupe score pack ingest outline assemble stitch qc publish smoke-test
+.PHONY: help curate clean dedupe score pack ingest outline assemble stitch qc publish smoke-test test guard install-ps-alias
 
 help: ## Show this help message
 @echo "Alexandria Build Targets:"
@@ -24,6 +24,8 @@ help: ## Show this help message
 @echo "Development:"
 @echo "  make smoke-test               - Run foundation smoke test"
 @echo "  make test                     - Run all unit tests"
+@echo "  make guard                    - Run repository guard checks"
+@echo "  make install-ps-alias         - Install PowerShell 'python' command alias (Windows)"
 
 # Knowledge Organization (Phase K)
 curate: ## Add sources to catalog
@@ -94,3 +96,9 @@ smoke-test: ## Run foundation smoke test
 
 test: ## Run all unit tests
 @pytest tests/unit/ -v
+
+guard: ## Run repository guard checks
+python scripts/guard/verify_progress.py
+
+install-ps-alias: ## Install PowerShell 'python' command alias (Windows only)
+python scripts/guard/install_powershell_alias.py

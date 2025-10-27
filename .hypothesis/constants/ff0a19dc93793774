@@ -1,0 +1,4 @@
+# file: C:\Users\Couch\Documents\AI Projects Folder\Project_Alexandria\app\packages\base\autodoc.py
+# hypothesis_version: 6.141.1
+
+['## Members', '()', '*.py', '.', '.pyi', '/', 'ModuleDoc', '_', '__pycache__', 'app', 'app.', 'collect_module_docs', 'generate_stub_files', 'utf-8']

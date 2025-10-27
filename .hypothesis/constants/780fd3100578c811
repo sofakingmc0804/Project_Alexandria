@@ -1,0 +1,4 @@
+# file: C:\Users\Couch\Documents\AI Projects Folder\Project_Alexandria\app\apps\worker\celery_app.py
+# hypothesis_version: 6.141.1
+
+['1', 'CELERY_BROKER_URL', 'REGISTERED_TASKS', 'SUCCESS', 'alexandria', 'cache+memory://', 'celery_app', 'eager', 'memory://']

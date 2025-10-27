@@ -1,0 +1,4 @@
+# file: C:\Users\Couch\Documents\AI Projects Folder\Project_Alexandria\app\packages\ingest\watcher.py
+# hypothesis_version: 6.141.1
+
+[1024, 65536, '--file', '--inputs', '--tmp', '.', '.m4a', '.mp3', '.mp4', '.mpeg', '.mpg', '.wav', 'File is empty', 'Z', '__main__', 'checksum_sha256', 'config', 'filename', 'files', 'format', 'ingest', 'ingested', 'input_file', 'inputs', 'job_id', 'language', 'manifest.json', 'metadata', 'mix_profile', 'passed', 'path', 'persona', 'pipeline_stage', 'qc_metrics', 'rb', 'size_bytes', 'status', 'timestamp', 'title', 'tmp', 'utf-8', 'w']

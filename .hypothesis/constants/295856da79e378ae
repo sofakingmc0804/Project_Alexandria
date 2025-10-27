@@ -1,0 +1,4 @@
+# file: C:\Users\Couch\AppData\Roaming\Python\Python313\site-packages\schemathesis\schemas.py
+# hypothesis_version: 6.141.1
+
+['*', ', ', '/', 'D', 'P', 'R', 'S', '_data', '_schema', 'before_generate_case', 'body', 'cookie', 'filter_case', 'flatmap_case', 'header', 'headers', 'hooks', 'items', 'links', 'map_case', 'operations', 'path', 'query', 'raw', 'selected', 'total', '~', '~0', '~1']

@@ -1,0 +1,4 @@
+# file: C:\Users\Couch\AppData\Roaming\Python\Python313\site-packages\schemathesis\generation\overrides.py
+# hypothesis_version: 6.141.1
+
+['cookies', 'headers', 'is_generated', 'path_parameters', 'query', 'value']

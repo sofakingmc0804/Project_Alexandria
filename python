@@ -1,0 +1,22 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+ROOT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+
+if [[ -n "${ALEXANDRIA_PYTHON_PATH:-}" ]]; then
+  PY_CMD="${ALEXANDRIA_PYTHON_PATH}"
+elif command -v python3 >/dev/null 2>&1; then
+  PY_CMD="python3"
+elif command -v python >/dev/null 2>&1; then
+  PY_CMD="python"
+else
+  echo "[guard] Unable to locate Python interpreter." >&2
+  exit 1
+fi
+
+if [[ "${ALEXANDRIA_GUARD_SKIP:-}" != "1" && "${ALEXANDRIA_GUARD_MODE:-}" != "developer" ]]; then
+  "${PY_CMD}" "${ROOT_DIR}/scripts/guard/verify_progress.py"
+fi
+
+export ALEXANDRIA_GUARD_SKIP=1
+exec "${PY_CMD}" "$@"

@@ -1,0 +1,4 @@
+# file: C:\Users\Couch\Documents\AI Projects Folder\Project_Alexandria\app\packages\ingest\normalizer.py
+# hypothesis_version: 6.141.1
+
+[16000, '--input', '--job', '--output', '--sample-rate', '-ac', '-ar', '-c', '-i', '-sample_fmt', '-y', '/', '1', 'USE_WSL_AUDIO', '\\', '__main__', 'bash', 'channels', 'ffmpeg', 'format', 'input_file', 'manifest.json', 'normalized', 'normalized_audio', 'path', 'pipeline_stage', 'r', 's16', 'sample_rate', 'size_bytes', 'true', 'utf-8', 'w', 'wav', 'win32', 'wsl']

@@ -1,0 +1,4 @@
+# file: C:\Users\Couch\AppData\Roaming\Python\Python313\site-packages\schemathesis\hooks.py
+# hypothesis_version: 6.141.1
+
+[', ', 'HookDispatcher', 'after_load_schema', 'apply_to', 'before_load_schema', 'before_process_path', 'body', 'case', 'cookies', 'filter', 'filter_set', 'flatmap', 'headers', 'hook_dispatcher', 'map', 'operation', 'path_parameters', 'query', 'scopes', 'signature', 'skip_for']

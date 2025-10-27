@@ -1,0 +1,4 @@
+# file: C:\Users\Couch\AppData\Roaming\Python\Python313\site-packages\celery\app\trace.py
+# hypothesis_version: 6.141.1
+
+[0.0, 'BaseTask.__call__', 'INTERNAL ERROR', 'TraceInfo', '__call__', '__traceback__', '_stackprotected', 'after_return', 'args', 'argsrepr', 'before_start', 'build_tracer', 'celery.app.task', 'data', 'description', 'exc', 'format', 'hostname', 'id', 'ignored', 'info', 'internal', 'is_eager', 'kwargs', 'kwargsrepr', 'log_policy_t', 'mail', 'name', 'on_success', 'pickle', 'pid', 'priority', 'raised expected', 'raised unexpected', 'redelivered', 'rejected', 'retstr', 'return_value', 'retval', 'runtime', 'severity', 'shadow', 'state', 'trace_ok_t', 'trace_task', 'traceback']

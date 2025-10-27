@@ -1,0 +1,4 @@
+# file: C:\Users\Couch\AppData\Roaming\Python\Python313\site-packages\kombu\messaging.py
+# hypothesis_version: 6.141.1
+
+[1000, 'Consumer', 'Exchange', 'Producer', 'Queue', 'basic_return', 'binary', 'compression', 'delivery_mode', 'expiration', 'message_to_python', 'reply_to', 'utf-8', '{}{}']

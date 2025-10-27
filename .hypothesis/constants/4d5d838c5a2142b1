@@ -1,0 +1,4 @@
+# file: C:\Users\Couch\AppData\Roaming\Python\Python313\site-packages\schemathesis\config\_operations.py
+# hypothesis_version: 6.141.1
+
+['-regex', '[]', '_filter_set', '_rate_limit', '_regex', 'auth', 'checks', 'continue-on-failure', 'continue_on_failure', 'enabled', 'exclude-by', 'generation', 'headers', 'include-by', 'max-redirects', 'max_redirects', 'method', 'name', 'operation-id', 'operation_id', 'operations', 'parameters', 'path', 'phases', 'proxy', 'rate-limit', 'rate_limit', 'request-cert', 'request-cert-key', 'request-timeout', 'request_cert', 'request_cert_key', 'request_timeout', 'tag', 'tls-verify', 'tls_verify', 'warnings']

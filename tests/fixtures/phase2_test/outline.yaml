@@ -1,0 +1,18 @@
+job_id: phase2_test
+target_duration_minutes: 60
+length_mode: topic_focus
+chapters:
+- chapter_id: ch01
+  title: Chapter 1
+  description: Welcome to this episode where we discuss machine l...
+  segment_ids:
+  - 9800566a-1d1d-4e72-9195-71db2735adae
+  - f7cb1bd4-2384-4fea-8b4a-5cbcf60f1d17
+  - 3cbf0ffb-1047-4cf1-bfcb-91edb0f2e2e9
+  duration_minutes: 2.0
+  order: 1
+validation:
+  passed: false
+  total_duration: 2.0
+  target_duration: 60
+  num_chapters: 1

@@ -1,0 +1,26 @@
+{
+  "job_id": "phase2_test",
+  "passed": false,
+  "checks": {
+    "ragas": {
+      "passed": false
+    },
+    "wer": {
+      "passed": true
+    },
+    "lufs": {
+      "passed": true
+    },
+    "continuity": {
+      "passed": true
+    },
+    "deliverables": {
+      "passed": true
+    }
+  },
+  "issues": [
+    "Groundedness 0.712 below threshold 0.8",
+    "Context precision 0.650 below threshold 0.7",
+    "Context recall 0.000 below threshold 0.7"
+  ]
+}

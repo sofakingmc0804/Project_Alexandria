@@ -1,0 +1,4 @@
+# file: C:\Users\Couch\AppData\Roaming\Python\Python313\site-packages\schemathesis\config\__init__.py
+# hypothesis_version: 6.141.1
+
+[128, '.git', 'CheckConfig', 'ChecksConfig', 'ConfigError', 'CoveragePhaseConfig', 'GenerationConfig', 'HealthCheck', 'InferenceAlgorithm', 'OutputConfig', 'PhaseConfig', 'PhasesConfig', 'ProjectConfig', 'ProjectsConfig', 'ReportConfig', 'ReportFormat', 'ReportsConfig', 'SanitizationConfig', 'SchemathesisConfig', 'SchemathesisWarning', 'SimpleCheckConfig', 'StatefulPhaseConfig', 'TruncationConfig', '_seed', 'color', 'get_workers_count', 'max-failures', 'max_failures', 'output', 'projects', 'reports', 'schemathesis.toml', 'seed', 'utf-8', 'wait-for-schema', 'wait_for_schema']

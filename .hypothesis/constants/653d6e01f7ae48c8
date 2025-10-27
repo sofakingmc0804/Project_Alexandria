@@ -1,0 +1,4 @@
+# file: C:\Users\Couch\AppData\Roaming\Python\Python313\site-packages\schemathesis\core\jsonschema\references.py
+# hypothesis_version: 6.141.1
+
+['$comment', '$defs', '$id', '$ref', '$schema', 'additionalItems', 'additionalProperties', 'allOf', 'anyOf', 'default', 'definitions', 'deprecated', 'description', 'example', 'examples', 'items', 'maxItems', 'minItems', 'oneOf', 'prefixItems', 'properties', 'readOnly', 'required', 'title', 'writeOnly']

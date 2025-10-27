@@ -1,0 +1,4 @@
+# file: C:\Users\Couch\Documents\AI Projects Folder\Project_Alexandria\app\packages\worker\__init__.py
+# hypothesis_version: 6.141.1
+
+['Phase5Artifacts', 'export_derivatives', 'generate_notes', 'generate_stems', 'mix_audio', 'run_full_pipeline']

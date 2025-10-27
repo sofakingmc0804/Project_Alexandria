@@ -1,0 +1,20 @@
+{
+  "job_id": "phase2_test",
+  "audio_file": "output_mix.wav",
+  "measurements": {
+    "integrated_lufs": -15.64,
+    "loudness_range": 10.04,
+    "true_peak_dbtp": -1.32
+  },
+  "targets": {
+    "integrated_lufs": -16.0,
+    "lufs_tolerance": 1.0,
+    "max_true_peak_dbtp": -1.0
+  },
+  "compliance": {
+    "lufs": true,
+    "true_peak": true
+  },
+  "passed": true,
+  "issues": []
+}

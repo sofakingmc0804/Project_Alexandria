@@ -1,0 +1,4 @@
+# file: C:\Users\Couch\AppData\Roaming\Python\Python313\site-packages\schemathesis\transport\prepare.py
+# hypothesis_version: 6.141.1
+
+['/', 'Missing', 'User-Agent', 'at header', 'cookies', 'headers', 'http', 'localhost', 'params', 'query', 'url']

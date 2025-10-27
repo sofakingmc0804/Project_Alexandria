@@ -1,0 +1,4 @@
+# file: C:\Users\Couch\Documents\AI Projects Folder\Project_Alexandria\app\packages\models_generated\segment_model.py
+# hypothesis_version: 6.141.1
+
+[0.97, 1000, 15000, 32000, 65000, 'Origin audio file', 'confidence', 'en', 'end_ms', 'episode_001.wav', 'example', 'host_a', 'id', 'lang', 'seg_001', 'source_file', 'speaker_id', 'start_ms', 'text']

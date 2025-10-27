@@ -21,8 +21,8 @@ def validate_config(config_path: str, required_fields: list) -> tuple[bool, list
         return False, [f"Config file not found: {config_path}"]
     
     try:
-        with open(path) as f:
-            config = yaml.safe_load(f)
+        content = path.read_text(encoding="utf-8")
+        config = yaml.safe_load(content)
     except Exception as e:
         return False, [f"Failed to parse YAML: {e}"]
     

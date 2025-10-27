@@ -1,0 +1,36 @@
+{
+  "job_id": "phase2_test",
+  "nodes": [
+    {
+      "id": "9800566a-1d1d-4e72-9195-71db2735adae",
+      "index": 0,
+      "start_ms": 0.0,
+      "end_ms": 50000.0,
+      "text_preview": "Welcome to this episode where we discuss machine learning fundamentals. Today we will explore neural...",
+      "lang": "en"
+    },
+    {
+      "id": "f7cb1bd4-2384-4fea-8b4a-5cbcf60f1d17",
+      "index": 1,
+      "start_ms": 50000.0,
+      "end_ms": 100000.0,
+      "text_preview": "Deep learning has revolutionized computer vision, natural language processing, and many other fields...",
+      "lang": "en"
+    },
+    {
+      "id": "3cbf0ffb-1047-4cf1-bfcb-91edb0f2e2e9",
+      "index": 2,
+      "start_ms": 100000.0,
+      "end_ms": 120000.0,
+      "text_preview": "Lets now discuss transformer architectures which have become the foundation for modern language mode...",
+      "lang": "en"
+    }
+  ],
+  "edges": [],
+  "num_nodes": 3,
+  "num_edges": 0,
+  "num_duplicates": 0,
+  "duplicates": [],
+  "similarity_threshold": 0.7,
+  "duplicate_threshold": 0.9
+}

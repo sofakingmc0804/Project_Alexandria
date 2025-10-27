@@ -1,0 +1,4 @@
+# file: C:\Users\Couch\Documents\AI Projects Folder\Project_Alexandria\app\packages\models_generated\qc_model.py
+# hypothesis_version: 6.141.1
+
+[-16.2, -1.3, 0.74, 0.82, 6.5, 3600, '2025-10-16T09:30:00Z', 'True peak in dB', 'context_precision', 'duration_seconds', 'example', 'groundedness', 'issues', 'job_20251016_001', 'job_id', 'lufs', 'metrics', 'passed', 'recommendations', 'timestamp', 'true_peak_db', 'wer']

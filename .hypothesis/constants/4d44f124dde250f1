@@ -1,0 +1,4 @@
+# file: C:\Users\Couch\AppData\Roaming\Python\Python313\site-packages\schemathesis\specs\openapi\formats.py
+# hypothesis_version: 6.141.1
+
+[128, 255, "!#$%&'*+-.^_`|~", 'Bearer {}', 'PyPy', '_basic_auth', '_bearer_auth', '_header_name', '_header_value', 'binary', 'byte', 'uuid']

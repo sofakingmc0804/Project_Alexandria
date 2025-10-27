@@ -1,0 +1,4 @@
+# file: C:\Users\Couch\AppData\Roaming\Python\Python313\site-packages\pytest_benchmark\storage\file.py
+# hypothesis_version: 6.141.1
+
+['%04i', '*', '*.json', '0001', '\\/', '_', 'benchmarks', 'path', 'source', 'stats', 'utf8', 'wb']

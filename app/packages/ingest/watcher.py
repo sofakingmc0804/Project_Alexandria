@@ -9,7 +9,7 @@ import hashlib
 import json
 import os
 import sys
-from datetime import datetime
+from datetime import datetime, timezone
 from pathlib import Path
 from typing import Dict, List, Optional
 
@@ -65,10 +65,11 @@ def create_manifest(input_file: Path, job_id: str, output_dir: Path) -> Dict:
     """
     checksum = compute_checksum(input_file)
     size = input_file.stat().st_size
+    timestamp = datetime.now(timezone.utc)
     
     manifest = {
         "job_id": job_id,
-        "timestamp": datetime.utcnow().isoformat() + "Z",
+        "timestamp": timestamp.isoformat().replace("+00:00", "Z"),
         "input_file": {
             "path": str(input_file),
             "filename": input_file.name,
@@ -148,7 +149,8 @@ def scan_inputs(inputs_dir: Path = None, tmp_dir: Path = None) -> List[Dict]:
             continue
         
         # Generate job ID from filename + timestamp
-        job_id = f"{input_file.stem}_{datetime.utcnow().strftime('%Y%m%d_%H%M%S')}"
+        now_utc = datetime.now(timezone.utc)
+        job_id = f"{input_file.stem}_{now_utc.strftime('%Y%m%d_%H%M%S')}"
         job_dir = tmp_dir / job_id
         
         # Check if already processed

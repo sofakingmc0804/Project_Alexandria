@@ -1,0 +1,4 @@
+# file: C:\Users\Couch\Documents\AI Projects Folder\Project_Alexandria\app\packages\cli\cli_generated.py
+# hypothesis_version: 6.141.1
+
+['  Summary metrics:', '--config', '--export-dir', '--notes-name', '--work-dir', 'Input mix WAV', 'Input script', 'Input script.md', 'Output WAV file path', '__main__', 'configs/hosts.yaml', 'dist/export/phase5', 'mix.wav', 'notes.md', 'pipeline', 'stems', 'tmp/phase5']

@@ -1,0 +1,4 @@
+# file: C:\Users\Couch\Documents\AI Projects Folder\Project_Alexandria\app\packages\models_generated\chapter_model.py
+# hypothesis_version: 6.141.1
+
+[300000, 'Chapter identifier', 'Chapter title', 'End timestamp in ms', 'Introduction', 'chapter_01', 'end_ms', 'example', 'id', 'start_ms', 'title']

@@ -1,0 +1,4 @@
+# file: C:\Users\Couch\AppData\Roaming\Python\Python313\site-packages\uri_template\expansions.py
+# hypothesis_version: 6.141.1
+
+['#', '%', '&', '+', ',', ',+', '.', '/', ';', '=', '?', 'Bad expansion: ', '[', ']', 'list[Variable]', 'utf8', '{', '}']

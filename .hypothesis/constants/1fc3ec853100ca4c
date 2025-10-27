@@ -1,0 +1,4 @@
+# file: C:\Users\Couch\AppData\Roaming\Python\Python313\site-packages\schemathesis\core\parameters.py
+# hypothesis_version: 6.141.1
+
+['body', 'cookie', 'cookies', 'header', 'headers', 'path', 'path_parameters', 'query']

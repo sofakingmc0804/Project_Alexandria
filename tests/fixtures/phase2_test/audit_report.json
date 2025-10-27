@@ -1,0 +1,85 @@
+{
+  "script_path": "tests\\fixtures\\phase2_test\\script.md",
+  "total_sentences": 9,
+  "avg_groundedness": 0.0,
+  "grounded_sentences": 0,
+  "grounded_percentage": 0.0,
+  "min_groundedness_threshold": 0.8,
+  "passed": false,
+  "sentence_audits": [
+    {
+      "sentence_id": 0,
+      "text": "Welcome to this episode where we discuss machine learning fundamentals.",
+      "groundedness": 0.0,
+      "retrieved_chunks": 0,
+      "supporting_sources": [],
+      "top_relevance": 0.0
+    },
+    {
+      "sentence_id": 1,
+      "text": "Today we will explore neural networks and deep learning concepts that are transforming artificial intelligence.",
+      "groundedness": 0.0,
+      "retrieved_chunks": 0,
+      "supporting_sources": [],
+      "top_relevance": 0.0
+    },
+    {
+      "sentence_id": 2,
+      "text": "Neural networks are inspired by biological neurons in the human brain.",
+      "groundedness": 0.0,
+      "retrieved_chunks": 0,
+      "supporting_sources": [],
+      "top_relevance": 0.0
+    },
+    {
+      "sentence_id": 3,
+      "text": "They consist of interconnected layers of nodes that process information and learn patterns from data.",
+      "groundedness": 0.0,
+      "retrieved_chunks": 0,
+      "supporting_sources": [],
+      "top_relevance": 0.0
+    },
+    {
+      "sentence_id": 4,
+      "text": "Deep learning has revolutionized computer vision, natural language processing, and many other fields.",
+      "groundedness": 0.0,
+      "retrieved_chunks": 0,
+      "supporting_sources": [],
+      "top_relevance": 0.0
+    },
+    {
+      "sentence_id": 5,
+      "text": "It allows computers to learn hierarchical representations of data.",
+      "groundedness": 0.0,
+      "retrieved_chunks": 0,
+      "supporting_sources": [],
+      "top_relevance": 0.0
+    },
+    {
+      "sentence_id": 6,
+      "text": "Training neural networks requires large datasets and significant computational power.",
+      "groundedness": 0.0,
+      "retrieved_chunks": 0,
+      "supporting_sources": [],
+      "top_relevance": 0.0
+    },
+    {
+      "sentence_id": 7,
+      "text": "GPUs and specialized hardware have made this more accessible in recent years.",
+      "groundedness": 0.0,
+      "retrieved_chunks": 0,
+      "supporting_sources": [],
+      "top_relevance": 0.0
+    },
+    {
+      "sentence_id": 8,
+      "text": "Lets now discuss transformer architectures which have become the foundation for modern language models like GPT and BERT.",
+      "groundedness": 0.0,
+      "retrieved_chunks": 0,
+      "supporting_sources": [],
+      "top_relevance": 0.0
+    }
+  ],
+  "sources_used": 0,
+  "chunks_indexed": 1
+}

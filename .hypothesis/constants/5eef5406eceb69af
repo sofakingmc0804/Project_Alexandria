@@ -1,0 +1,4 @@
+# file: C:\Users\Couch\AppData\Roaming\Python\Python313\site-packages\schemathesis\config\_phases.py
+# hypothesis_version: 6.141.1
+
+['_is_default', 'algorithms', 'checks', 'coverage', 'delete', 'dependency-analysis', 'enabled', 'examples', 'fill-missing', 'fill_missing', 'fuzzing', 'generation', 'get', 'inference', 'location-headers', 'max-steps', 'max_steps', 'options', 'patch', 'post', 'put', 'stateful', 'trace', 'unexpected-methods', 'unexpected_methods']

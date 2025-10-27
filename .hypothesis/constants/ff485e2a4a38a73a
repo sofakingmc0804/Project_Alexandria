@@ -1,0 +1,4 @@
+# file: C:\Users\Couch\AppData\Roaming\Python\Python313\site-packages\celery\concurrency\__init__.py
+# hypothesis_version: 6.141.1
+
+['custom', 'eventlet', 'get_implementation', 'gevent', 'prefork', 'processes', 'solo', 'threads']

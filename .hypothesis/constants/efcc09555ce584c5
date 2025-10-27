@@ -1,0 +1,4 @@
+# file: C:\Users\Couch\AppData\Roaming\Python\Python313\site-packages\schemathesis\config\_generation.py
+# hypothesis_version: 6.141.1
+
+['all', 'allow-x00', 'allow_x00', 'codec', 'database', 'deterministic', 'graphql-allow-null', 'graphql_allow_null', 'max-examples', 'max_examples', 'maximize', 'mode', 'modes', 'no-shrink', 'no_shrink', 'unique-inputs', 'unique_inputs', 'utf-8']

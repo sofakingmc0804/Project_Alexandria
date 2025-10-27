@@ -1,0 +1,15 @@
+{
+  "job_id": "phase2_test",
+  "timestamp": "2025-10-14T00:00:00Z",
+  "input_file": {
+    "path": "tests/fixtures/phase2_test.wav",
+    "filename": "phase2_test.wav",
+    "size_bytes": 1000,
+    "format": "wav"
+  },
+  "status": "transcribed",
+  "pipeline_stage": "transcribed",
+  "metadata": {
+    "language": "en"
+  }
+}

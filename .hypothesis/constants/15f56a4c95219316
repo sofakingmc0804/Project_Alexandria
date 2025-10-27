@@ -1,0 +1,4 @@
+# file: C:\Users\Couch\Documents\AI Projects Folder\Project_Alexandria\scripts\validate_config.py
+# hypothesis_version: 6.141.1
+
+['__main__', 'chunking', 'configs/hosts.yaml', 'crossfade_ms', 'db', 'deliverables', 'embed_model', 'export_formats', 'hosts', 'id', 'language', 'length_mode', 'lufs_target', 'mix_profile', 'name', 'persona', 'persona_id', 'processing', 'quality', 'retrieval', 'tone_traits', 'utf-8', 'voice_config']

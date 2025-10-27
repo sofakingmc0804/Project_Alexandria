@@ -1,0 +1,4 @@
+# file: C:\Users\Couch\AppData\Roaming\Python\Python313\site-packages\kombu\pools.py
+# hypothesis_version: 6.141.1
+
+['PoolGroup', 'Producer', 'ProducerPool', 'connections', 'get_limit', 'producers', 'register_group', 'reset', 'set_limit']

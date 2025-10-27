@@ -1,0 +1,4 @@
+# file: C:\Users\Couch\Documents\AI Projects Folder\Project_Alexandria\app\packages\tts\synthesizer.py
+# hypothesis_version: 6.141.1
+
+[0.0, 1.0, 20.0, 220, 400, 512, 16000, '#', ':', 'Narrator', '__main__', 'configs/hosts.yaml', 'f5:en_male_01', 'fallback', 'hosts', 'id', 'name', 'pitch', 'r', 'rate', 'seed', 'tmp/voice_cache', 'utf-8', 'voice', 'wb']

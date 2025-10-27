@@ -1,0 +1,4 @@
+# file: C:\Users\Couch\Documents\AI Projects Folder\Project_Alexandria\app\packages\asr\transcriber.py
+# hypothesis_version: 6.141.1
+
+[0.0, 0.5, 1.0, 5.0, 1000, 3600, '--audio', '--job', '--model', '--output', 'Mock', 'WHISPER_MODEL', '__main__', 'cpu', 'duration', 'en', 'end', 'id', 'int8', 'json_path', 'language', 'large-v3', 'manifest.json', 'normalized_audio', 'path', 'pipeline_stage', 'probability', 'r', 'segments', 'segments_count', 'srt_path', 'start', 'text', 'transcribed', 'transcript', 'transcript.json', 'transcript.srt', 'utf-8', 'w', 'word', 'words', 'words_count']

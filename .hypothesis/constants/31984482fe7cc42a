@@ -1,0 +1,4 @@
+# file: C:\Users\Couch\AppData\Roaming\Python\Python313\site-packages\schemathesis\config\_warnings.py
+# hypothesis_version: 6.141.1
+
+['missing_auth', 'missing_test_data', 'validation_mismatch']

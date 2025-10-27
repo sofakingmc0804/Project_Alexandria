@@ -1,0 +1,4 @@
+# file: C:\Users\Couch\AppData\Roaming\Python\Python313\site-packages\billiard\process.py
+# hypothesis_version: 6.141.1
+
+[' daemon', '-', '/mp', ':', '<%s(%s, %s%s)>', 'BaseProcess', 'MainProcess', 'Process', 'Process %s', 'Process %s:\n', 'SIG', '_', 'active_children', 'authkey', 'current_process', 'daemon', 'initial', 'process not started', 'semprefix', 'started', 'stopped', 'stopped[%s]', 'tempdir', 'unknown']
