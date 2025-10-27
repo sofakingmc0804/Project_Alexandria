@@ -1,0 +1,4 @@
+# file: C:\Users\Couch\AppData\Roaming\Python\Python313\site-packages\faiss\__init__.py
+# hypothesis_version: 6.141.1
+
+['%d.%d.%d', 'addIndex', 'add_shard', 'coarse_quantizer_ms', 'faiss_cpu.libs', 'float32', 'float64', 'invlist_scan_ms', 'ndis', 'pre_transform_ms', 'prepend_transform', 'referenced_objects', 'replace_vt', 'uint64']

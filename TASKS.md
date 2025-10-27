@@ -114,6 +114,11 @@
 [FINISH 2025-10-16T14:50Z] T5.08 - Shared pipeline base created; notes generator migrated to new step API
 [START 2025-10-16T15:00Z] T5.09 - Wire persona configs into writer module with tests
 [FINISH 2025-10-16T15:10Z] T5.09 - Persona loader module added; scripter rewrites text based on persona cards with tests
+[START 2025-10-27T00:00Z] UPLOAD-001 - Uploading Project Alexandria to GitHub
+[FINISH 2025-10-27T00:05Z] UPLOAD-001 - Repository uploaded and synced with GitHub
+[START 2025-10-27T17:00Z] REM-020 - Adding deterministic fixtures and tests for Phase 1 ingestion/ASR
+[FINISH 2025-10-27T17:15Z] REM-020.1 - Created test audio fixtures and 17 unit tests for watcher.py with full coverage
+<!-- PROGRESS LOG END -->
 [START 2025-10-17T14:00Z] T6.01 - Update outliner.py to support length_mode variants
 [FINISH 2025-10-17T14:15Z] T6.01 - Outliner now supports full/condensed/topic_focus modes with segment selection and duration targeting
 [START 2025-10-17T14:15Z] T6.02 - Write promo_clipper.py for highlight extraction
@@ -184,6 +189,9 @@
 - [x] **TEST-003** Validate Phase 5 audio pipeline on deterministic fixtures.
   **Done when**: Running the prescribed fixture manifest produces stems, mix, exports, and notes without errors.
 
+- [x] **TEST-004** Validate async Phase 5 orchestrator via pytest
+  **Done when**: Orchestrator tests passing (pipeline command + summary metrics)
+
 ---
 
 ## Remediation Backlog
@@ -196,6 +204,7 @@
 
 - [ ] REM-020 Replace Phase 1 ingestion/ASR mocks with verifiable behaviors and tests.
   **Done when**: Watcher, normalizer, transcriber, and language detector have deterministic fixtures and pytest coverage.
+  - [x] REM-020.1 Create test audio fixtures and watcher.py unit tests
 
 - [ ] REM-030 Add deterministic fixtures and tests for Phase 2 segmentation/embedding.
   **Done when**: Segmenter, embedder, indexer, and graph builder produce validated outputs under pytest.
@@ -359,6 +368,21 @@
 - [x] T5.05 Write `packages/exporters/notes_generator.py` that creates show notes markdown from script chapters.
   **Done when**: `/dist/export/{job_id}/notes.md` exists with timestamped chapters.
 
+- [x] T5.06 Designing async orchestrator and CLI integration for Phase 5
+  **Done when**: Async orchestrator, Typer pipeline command, and regression tests implemented
+
+- [x] T5.07 Add Hypothesis-based schema regression tests
+  **Done when**: Hypothesis property tests for generated models passing
+
+- [x] T5.08 Introduce pipeline base classes and refactor notes generator
+  **Done when**: Shared pipeline base created; notes generator migrated to new step API
+
+- [x] T5.09 Wire persona configs into writer module with tests
+  **Done when**: Persona loader module added; scripter rewrites text based on persona cards with tests
+
+- [x] PHASE5 Execute Phase 5 TTS and mastering pipeline
+  **Done when**: Phase 5 complete: all 12 tests passing, synthesizer/batch_synth/mixer/exporter/notes_generator operational
+
 ---
 
 ## Phase 6 — Variants & Customization (MVP Delivery Features)
@@ -422,6 +446,13 @@
 
 - [ ] T9.03 Write `README.md` with: installation, quickstart, config options, troubleshooting.
   **Done when**: Following README produces working episode.
+
+---
+
+## Repository Management
+
+- [x] **UPLOAD-001** Uploading Project Alexandria to GitHub
+  **Done when**: Repository uploaded and synced with GitHub
 
 ---
 

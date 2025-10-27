@@ -1,0 +1,4 @@
+# file: C:\Users\Couch\AppData\Roaming\Python\Python313\site-packages\faiss\array_conversions.py
+# hypothesis_version: 6.141.1
+
+['AlignedTable', 'Byte', 'Char', 'Double', 'Float', 'Float32', 'Float64', 'Int', 'Int16', 'Int32', 'Int64', 'Int8', 'Long', 'LongLong', 'UInt16', 'UInt32', 'UInt64', 'UInt8', 'Uint64', 'Vector', 'VectorVector', '__new__', 'float32', 'float64', 'int16', 'int32', 'int64', 'int8', 'l', 'uint16', 'uint32', 'uint64', 'uint8']

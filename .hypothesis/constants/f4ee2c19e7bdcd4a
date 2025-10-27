@@ -1,0 +1,4 @@
+# file: C:\Users\Couch\Documents\AI Projects Folder\Project_Alexandria\app\packages\embed\indexer.py
+# hypothesis_version: 6.141.1
+
+['IndexFlatIP', 'IndexFlatL2', '__main__', 'dimension', 'embedding', 'embedding_model', 'faiss', 'index.faiss', 'index.npy', 'index_metadata.json', 'index_path', 'index_type', 'job_id', 'none', 'num_vectors', 'numpy', 'r', 'segments', 'unknown', 'utf-8', 'w']

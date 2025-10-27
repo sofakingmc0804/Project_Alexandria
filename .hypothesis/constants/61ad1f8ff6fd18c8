@@ -1,0 +1,4 @@
+# file: C:\Users\Couch\Documents\AI Projects Folder\Project_Alexandria\app\packages\rag_audit\auditor.py
+# hypothesis_version: 6.141.1
+
+[0.0, 0.2, 0.5, 0.8, 1.0, 100, '#', '(?<=[.!?])\\s+', '--job', './tmp/faiss_index', ':', '__main__', 'audit_report.json', 'avg_groundedness', 'chunks', 'chunks_indexed', 'cpu', 'db_path', 'embed_device', 'embed_model', 'error', 'grounded_percentage', 'grounded_sentences', 'groundedness', 'min_groundedness', 'min_score', 'num_chunks', 'num_sources', 'passed', 'quality', 'r', 'relevance_score', 'retrieval', 'retrieved_chunks', 'script not found', 'script.md', 'script_path', 'sentence_audits', 'sentence_id', 'source_id', 'sources.index', 'sources_chunks.json', 'sources_used', 'supporting_sources', 'text', 'top_k', 'top_relevance', 'total_sentences', 'unknown', 'utf-8', 'utf-8-sig', 'w']

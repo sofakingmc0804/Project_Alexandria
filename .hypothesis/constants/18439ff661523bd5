@@ -1,0 +1,4 @@
+# file: C:\Users\Couch\AppData\Roaming\Python\Python313\site-packages\faiss\loader.py
+# hypothesis_version: 6.141.1
+
+[', \t\n\r', '.', '/usr/sbin/sysctl', '1', '1.19', '2.0', 'AVX2', 'AVX512', 'AVX512_SPR', 'Darwin', 'FAISS_OPT_LEVEL', 'Features', 'Linux', 'Loading faiss.', 'SVE', 'aarch64', 'avx2', 'avx512', 'avx512_fp16', 'flags', 'hw.optional.avx2_0', 'sve']

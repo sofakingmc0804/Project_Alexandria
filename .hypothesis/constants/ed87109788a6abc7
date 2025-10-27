@@ -1,0 +1,4 @@
+# file: C:\Users\Couch\Documents\AI Projects Folder\Project_Alexandria\app\packages\segment\segmenter.py
+# hypothesis_version: 6.141.1
+
+[0.0, 1.0, 20.0, 40.0, 60.0, 1000.0, 32768.0, 1000, '__main__', 'confidence', 'en', 'end', 'end_ms', 'id', 'job_id', 'lang', 'language', 'manifest.json', 'max_duration_s', 'min_duration_s', 'normalized_audio', 'passed', 'path', 'r', 'rb', 'segment_count', 'segments', 'segments.json', 'start', 'start_ms', 'text', 'transcript', 'transcript.json', 'utf-8', 'validation', 'w']

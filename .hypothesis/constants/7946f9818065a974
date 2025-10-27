@@ -1,0 +1,4 @@
+# file: C:\Users\Couch\Documents\AI Projects Folder\Project_Alexandria\app\packages\rag_audit\source_indexer.py
+# hypothesis_version: 6.141.1
+
+[1.3, 100, 512, '*.txt', '--job', '. ', './tmp/faiss_index', 'Cosine', 'Dot', 'Euclid', '__main__', 'alexandria_sources', 'char_end', 'char_start', 'chunk_id', 'chunk_overlap', 'chunk_size', 'chunking', 'chunks', 'collection_name', 'cpu', 'db', 'db_path', 'distance', 'embed_device', 'embed_model', 'embedding_dim', 'error', 'faiss', 'file_name', 'file_path', 'fixed', 'index_path', 'no chunks created', 'num_chunks', 'num_sources', 'qdrant', 'r', 'sentence', 'source_file', 'source_id', 'sources', 'sources.index', 'sources_chunks.json', 'strategy', 'text', 'unknown', 'url', 'utf-8', 'utf-8-sig', 'w']

@@ -1,0 +1,4 @@
+# file: C:\Users\Couch\AppData\Roaming\Python\Python313\site-packages\faiss\class_wrappers.py
+# hypothesis_version: 6.141.1
+
+['_c', 'add', 'add_sa_codes', 'add_with_ids', 'assign', 'build', 'codes', 'compute_codes', 'decode', 'evaluate', 'explore', 'float32', 'insert', 'int32', 'int64', 'pack_1', 'params not supported', 'permute_entries', 'range_search', 'reconstruct', 'reconstruct_batch', 'reconstruct_n', 'referenced_objects', 'remove_ids', 'replacement_', 'reverse_transform', 'sa_decode', 'sa_encode', 'search', 'search_multiple', 'search_preassigned', 'set_groundtruth', 'this', 'thisown', 'train', 'train_encoded', 'train_exact', 'train_inplace', 'uint8', 'unpack_1', 'update_vectors']
