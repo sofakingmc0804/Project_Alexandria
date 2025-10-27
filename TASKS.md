@@ -132,6 +132,15 @@
 [START 2025-10-27T20:30Z] REM-030.3 - Creating graph builder unit tests
 [FINISH 2025-10-27T21:00Z] REM-030.3 - Created 17 unit tests for graph builder (similarity, duplicates, graph construction)
 [FINISH 2025-10-27T21:15Z] REM-030 - Completed Phase 2 testing with 29 total unit tests (all passing), fixed numpy bool serialization bug
+[START 2025-10-27T21:30Z] REM-040 - Building regression tests for Phase 3 planning/writing pipeline
+[FINISH 2025-10-27T22:00Z] REM-040.1 - Created 19 unit tests for outliner.py (duration, chapters, modes)
+[START 2025-10-27T22:00Z] REM-040.2 - Creating selector.py unit tests
+[FINISH 2025-10-27T22:15Z] REM-040.2 - Created 9 unit tests for selector.py (duplicate avoidance, segment selection)
+[START 2025-10-27T22:15Z] REM-040.3 - Expanding scripter.py unit tests
+[FINISH 2025-10-27T22:30Z] REM-040.3 - Expanded scripter.py tests to 10 total (persona rewriting, multi-host, chapters)
+[START 2025-10-27T22:30Z] REM-040.4 - Creating checker.py unit tests
+[FINISH 2025-10-27T22:45Z] REM-040.4 - Created 14 unit tests for checker.py (continuity, blockers, reports)
+[FINISH 2025-10-27T23:00Z] REM-040 - Completed Phase 3 testing with 52 total unit tests (all passing)
 <!-- PROGRESS LOG END -->
 [START 2025-10-17T14:00Z] T6.01 - Update outliner.py to support length_mode variants
 [FINISH 2025-10-17T14:15Z] T6.01 - Outliner now supports full/condensed/topic_focus modes with segment selection and duration targeting
@@ -230,8 +239,12 @@
   - [x] REM-030.3 Create graph builder unit tests (17 tests for similarity, duplicates, graph construction)
   - [x] REM-030.4 Fix numpy bool serialization bug in builder.py
 
-- [ ] REM-040 Build regression tests for Phase 3 planning/writing pipeline.
+- [x] REM-040 Build regression tests for Phase 3 planning/writing pipeline.
   **Done when**: Outliner, selector, scripter, and continuity checker have fixture-driven tests asserting expected artifacts.
+  - [x] REM-040.1 Create outliner.py unit tests (19 tests for chapter generation, duration targeting, modes)
+  - [x] REM-040.2 Create selector.py unit tests (9 tests for segment selection, duplicate avoidance)
+  - [x] REM-040.3 Expand scripter.py unit tests (10 tests for persona rewriting, multi-host alternation)
+  - [x] REM-040.4 Create checker.py unit tests (14 tests for continuity checking, blockers, reports)
 
 - [ ] REM-050 Establish measurable tests for Phase 4 grounding audit.
   **Done when**: Source indexer and auditor have deterministic fixtures with assertions on retrieval quality and scoring.
