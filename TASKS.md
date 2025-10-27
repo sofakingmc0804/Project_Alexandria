@@ -133,6 +133,13 @@
 [FINISH 2025-10-27T21:00Z] REM-030.3 - Created 17 unit tests for graph builder (similarity, duplicates, graph construction)
 [FINISH 2025-10-27T21:15Z] REM-030 - Completed Phase 2 testing with 29 total unit tests (all passing), fixed numpy bool serialization bug
 [START 2025-10-27T21:30Z] REM-040 - Building regression tests for Phase 3 planning/writing pipeline
+[FINISH 2025-10-27T22:30Z] REM-040 - Completed Phase 3 testing with 52 total unit tests (outliner, selector, scripter, checker)
+[START 2025-10-27T22:45Z] REM-050 - Establishing measurable tests for Phase 4 RAG audit components
+[START 2025-10-27T22:45Z] REM-050.1 - Creating source_indexer.py unit tests with RAG indexing coverage
+[FINISH 2025-10-27T23:15Z] REM-050.1 - Created 18 unit tests for source_indexer.py (chunking, embedding, FAISS/Qdrant indexing)
+[START 2025-10-27T23:15Z] REM-050.2 - Creating auditor.py unit tests for groundedness verification
+[FINISH 2025-10-27T23:30Z] REM-050.2 - Created 13 unit tests for auditor.py (retrieval, scoring, audit reports)
+[FINISH 2025-10-27T23:45Z] REM-050 - Completed Phase 4 testing with 31 total unit tests (all passing)
 [FINISH 2025-10-27T22:00Z] REM-040.1 - Created 19 unit tests for outliner.py (duration, chapters, modes)
 [START 2025-10-27T22:00Z] REM-040.2 - Creating selector.py unit tests
 [FINISH 2025-10-27T22:15Z] REM-040.2 - Created 9 unit tests for selector.py (duplicate avoidance, segment selection)
@@ -246,8 +253,10 @@
   - [x] REM-040.3 Expand scripter.py unit tests (10 tests for persona rewriting, multi-host alternation)
   - [x] REM-040.4 Create checker.py unit tests (14 tests for continuity checking, blockers, reports)
 
-- [ ] REM-050 Establish measurable tests for Phase 4 grounding audit.
+- [x] REM-050 Establish measurable tests for Phase 4 grounding audit.
   **Done when**: Source indexer and auditor have deterministic fixtures with assertions on retrieval quality and scoring.
+  - [x] REM-050.1 Create source_indexer.py unit tests (18 tests for RAG indexing, chunking, embedding, FAISS/Qdrant)
+  - [x] REM-050.2 Create auditor.py unit tests (13 tests for groundedness verification, retrieval, scoring)
 
 - [x] REM-060 Document and automate guard execution workflow so agents run it before every checkpoint.
   **Done when**: Guard enforcement includes `make guard`, python wrappers that auto-run verify_progress.py, and docs/checklists ensuring agents execute guard before status updates.

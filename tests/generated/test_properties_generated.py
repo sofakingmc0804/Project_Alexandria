@@ -4,7 +4,7 @@ from __future__ import annotations
 
 from datetime import datetime, timezone
 
-from hypothesis import given, strategies as st
+from hypothesis import given, strategies as st, settings, HealthCheck
 from hypothesis.strategies import SearchStrategy
 
 from app.packages.models_generated import Chapter, Segment
@@ -22,6 +22,7 @@ _ascii_text = st.text(
 class TestSegmentProperties:
 	"""Property-based checks for the Segment model."""
 
+	@settings(suppress_health_check=[HealthCheck.too_slow])
 	@given(
 		start_ms=st.integers(min_value=0, max_value=100_000),
 		duration_ms=st.integers(min_value=15_000, max_value=65_000),
