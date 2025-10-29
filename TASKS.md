@@ -140,6 +140,8 @@
 [START 2025-10-27T23:15Z] REM-050.2 - Creating auditor.py unit tests for groundedness verification
 [FINISH 2025-10-27T23:30Z] REM-050.2 - Created 13 unit tests for auditor.py (retrieval, scoring, audit reports)
 [FINISH 2025-10-27T23:45Z] REM-050 - Completed Phase 4 testing with 31 total unit tests (all passing)
+[START 2025-10-29T14:00Z] T8.01 - Creating translator.py for NLLB-200 based multilingual translation
+[FINISH 2025-10-29T14:45Z] T8.01 - Completed translator.py with 28 unit tests (structure preservation, language codes, batch translation)
 [FINISH 2025-10-27T22:00Z] REM-040.1 - Created 19 unit tests for outliner.py (duration, chapters, modes)
 [START 2025-10-27T22:00Z] REM-040.2 - Creating selector.py unit tests
 [FINISH 2025-10-27T22:15Z] REM-040.2 - Created 9 unit tests for selector.py (duplicate avoidance, segment selection)
@@ -258,8 +260,11 @@
   - [x] REM-050.1 Create source_indexer.py unit tests (18 tests for RAG indexing, chunking, embedding, FAISS/Qdrant)
   - [x] REM-050.2 Create auditor.py unit tests (13 tests for groundedness verification, retrieval, scoring)
 
-- [x] REM-060 Document and automate guard execution workflow so agents run it before every checkpoint.
+- [ ] REM-060 Document and automate guard execution workflow so agents run it before every checkpoint.
   **Done when**: Guard enforcement includes `make guard`, python wrappers that auto-run verify_progress.py, and docs/checklists ensuring agents execute guard before status updates.
+
+- [ ] REM-080 Add tests for Phase 8 multilingual TTS voice model support.
+  **Done when**: TTS synthesizer can produce audio in multiple languages using appropriate voice models per language code.
 
 ---
 
@@ -471,7 +476,7 @@
 
 ## Phase 8 — Multilingual (V1 Enhancement)
 
-- [ ] T8.01 Write `packages/translate/translator.py` using NLLB-200, translates script.md to target language.
+- [x] T8.01 Write `packages/translate/translator.py` using NLLB-200, translates script.md to target language.
   **Done when**: Translated script maintains structure; language code in filename.
 
 - [ ] T8.02 Update TTS to support multilingual voice models per language.
