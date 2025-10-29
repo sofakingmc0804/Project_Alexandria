@@ -24,6 +24,24 @@ DEFAULT_EMBED_DIM = 512
 DEFAULT_CACHE_DIR = "tmp/voice_cache"
 
 
+# Language-to-voice mapping for multilingual TTS support
+# Maps ISO 639-1 language codes to default voice IDs
+DEFAULT_VOICE_MAP = {
+	'en': 'f5:en_male_01',
+	'es': 'f5:es_male_01',
+	'fr': 'f5:fr_male_01',
+	'de': 'f5:de_male_01',
+	'zh': 'f5:zh_male_01',
+	'ja': 'f5:ja_male_01',
+	'ko': 'f5:ko_male_01',
+	'pt': 'f5:pt_male_01',
+	'ru': 'f5:ru_male_01',
+	'ar': 'f5:ar_male_01',
+	'hi': 'f5:hi_male_01',
+	'it': 'f5:it_male_01',
+}
+
+
 @dataclass(frozen=True)
 class HostConfig:
 	"""Normalized host configuration record."""
@@ -35,6 +53,40 @@ class HostConfig:
 	rate: float
 	pitch: float
 	seed: int
+	language: str = "en"  # Language code for voice selection
+
+
+def get_voice_for_language(base_voice: str, language: str) -> str:
+	"""
+	Get appropriate voice ID for a target language.
+	
+	Args:
+		base_voice: Original voice ID (e.g., "f5:en_male_01")
+		language: Target language code (e.g., "es", "fr")
+		
+	Returns:
+		Language-appropriate voice ID (e.g., "f5:es_male_01")
+	"""
+	if language == "en" or language not in DEFAULT_VOICE_MAP:
+		return base_voice
+	
+	# Extract voice characteristics from base voice
+	# Format: "provider:lang_gender_number"
+	parts = base_voice.split(":")
+	if len(parts) != 2:
+		return base_voice
+	
+	provider = parts[0]
+	voice_parts = parts[1].split("_")
+	
+	if len(voice_parts) >= 3:
+		# Has lang_gender_number format
+		gender = voice_parts[1]  # male/female
+		number = voice_parts[2]  # 01, 02, etc.
+		return f"{provider}:{language}_{gender}_{number}"
+	
+	# Use default for language
+	return DEFAULT_VOICE_MAP.get(language, base_voice)
 
 
 def load_hosts_config(config_path: str = "configs/hosts.yaml") -> list[HostConfig]:
@@ -42,6 +94,9 @@ def load_hosts_config(config_path: str = "configs/hosts.yaml") -> list[HostConfi
 
 	with open(config_path, "r", encoding="utf-8") as handle:
 		raw = yaml.safe_load(handle)
+
+	# Get default language from config
+	default_language = raw.get("language", "en")
 
 	hosts: list[HostConfig] = []
 	for entry in raw.get("hosts", []):
@@ -54,6 +109,7 @@ def load_hosts_config(config_path: str = "configs/hosts.yaml") -> list[HostConfi
 				rate=float(entry.get("rate", 1.0)),
 				pitch=float(entry.get("pitch", 0.0)),
 				seed=int(entry.get("seed", 42)),
+				language=entry.get("language", default_language),
 			)
 		)
 	return hosts
@@ -136,15 +192,37 @@ def select_host(hosts: list[HostConfig], speaker: str) -> HostConfig:
 	return hosts[0]
 
 
-def synthesize_script(script_path: Path, output_dir: Path, config_path: str = "configs/hosts.yaml") -> list[Path]:
+def synthesize_script(script_path: Path, output_dir: Path, config_path: str = "configs/hosts.yaml", target_language: str | None = None) -> list[Path]:
 	"""Synthesize every utterance in ``script_path`` into ``output_dir``.
-
+	
+	Args:
+		script_path: Path to script markdown file
+		output_dir: Directory for output audio files
+		config_path: Path to hosts configuration
+		target_language: Optional language code for multilingual synthesis
+		
 	Returns list of generated file paths for convenience/testing.
 	"""
 
 	hosts = load_hosts_config(config_path)
 	if not hosts:
 		raise ValueError("No hosts defined in hosts.yaml")
+
+	# Apply language override if provided
+	if target_language:
+		hosts = [
+			HostConfig(
+				id=h.id,
+				name=h.name,
+				voice=get_voice_for_language(h.voice, target_language),
+				fallback=h.fallback,
+				rate=h.rate,
+				pitch=h.pitch,
+				seed=h.seed,
+				language=target_language,
+			)
+			for h in hosts
+		]
 
 	output_dir.mkdir(parents=True, exist_ok=True)
 	generated: list[Path] = []

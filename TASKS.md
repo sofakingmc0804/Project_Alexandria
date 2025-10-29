@@ -142,6 +142,16 @@
 [FINISH 2025-10-27T23:45Z] REM-050 - Completed Phase 4 testing with 31 total unit tests (all passing)
 [START 2025-10-29T14:00Z] T8.01 - Creating translator.py for NLLB-200 based multilingual translation
 [FINISH 2025-10-29T14:45Z] T8.01 - Completed translator.py with 28 unit tests (structure preservation, language codes, batch translation)
+[START 2025-10-29T15:30Z] REM-080 - Adding multilingual TTS voice model support and tests
+[START 2025-10-29T15:30Z] REM-080.1 - Implementing get_voice_for_language() for language-aware voice selection
+[FINISH 2025-10-29T15:45Z] REM-080.1 - Added language-to-voice mapping with support for 12 languages
+[START 2025-10-29T15:45Z] REM-080.2 - Enhancing HostConfig with language attribute
+[FINISH 2025-10-29T16:00Z] REM-080.2 - Added language field to HostConfig, updated load_hosts_config()
+[START 2025-10-29T16:00Z] REM-080.3 - Adding target_language parameter to synthesize_script()
+[FINISH 2025-10-29T16:15Z] REM-080.3 - Enhanced synthesize_script() with multilingual voice selection
+[START 2025-10-29T16:15Z] REM-080.4 - Creating comprehensive tests for multilingual TTS
+[FINISH 2025-10-29T16:30Z] REM-080.4 - Created 21 new tests (voice selection, synthesis, config)
+[FINISH 2025-10-29T16:45Z] REM-080 - Completed multilingual TTS support with 27 total tests (all passing)
 [FINISH 2025-10-27T22:00Z] REM-040.1 - Created 19 unit tests for outliner.py (duration, chapters, modes)
 [START 2025-10-27T22:00Z] REM-040.2 - Creating selector.py unit tests
 [FINISH 2025-10-27T22:15Z] REM-040.2 - Created 9 unit tests for selector.py (duplicate avoidance, segment selection)
@@ -260,11 +270,15 @@
   - [x] REM-050.1 Create source_indexer.py unit tests (18 tests for RAG indexing, chunking, embedding, FAISS/Qdrant)
   - [x] REM-050.2 Create auditor.py unit tests (13 tests for groundedness verification, retrieval, scoring)
 
-- [ ] REM-060 Document and automate guard execution workflow so agents run it before every checkpoint.
+- [x] REM-060 Document and automate guard execution workflow so agents run it before every checkpoint.
   **Done when**: Guard enforcement includes `make guard`, python wrappers that auto-run verify_progress.py, and docs/checklists ensuring agents execute guard before status updates.
 
-- [ ] REM-080 Add tests for Phase 8 multilingual TTS voice model support.
+- [x] REM-080 Add tests for Phase 8 multilingual TTS voice model support.
   **Done when**: TTS synthesizer can produce audio in multiple languages using appropriate voice models per language code.
+  - [x] REM-080.1 Add get_voice_for_language() function for language-aware voice selection
+  - [x] REM-080.2 Enhance HostConfig with language attribute
+  - [x] REM-080.3 Add target_language parameter to synthesize_script()
+  - [x] REM-080.4 Create 21 new tests for multilingual voice selection and synthesis
 
 ---
 
